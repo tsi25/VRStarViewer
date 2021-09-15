@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -849592436, guid: 5c29ea87cd1edfc499bd0cc979bc491d, type: 3}
+  m_Name: Open and Close UI
+  m_EditorClassIdentifier: 
+  command: ui
+  openParam: open
+  closeParam: close
+  viewParam: view
+  modalParam: modal
+  allParam: all
+  tweenParam: t

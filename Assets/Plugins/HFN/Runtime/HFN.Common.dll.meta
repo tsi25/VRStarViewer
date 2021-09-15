@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: 5c29ea87cd1edfc499bd0cc979bc491d
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    HFN.Common.AspectRatioLayoutElement: {fileID: 2800000, guid: fbf47554476a3264195f86b62c58e70d,
+      type: 3}
+    HFN.Common.AspectRatioLayoutManager: {fileID: 2800000, guid: fbf47554476a3264195f86b62c58e70d,
+      type: 3}
+    HFN.Common.AudioTweenVolume: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.Formation: {fileID: 2800000, guid: 19e5eb5ac3f2ba14bad2c4fb6cd1e213,
+      type: 3}
+    HFN.Common.FormationSlot: {fileID: 2800000, guid: bb0bbfa1e3001144483f778d16788adb,
+      type: 3}
+    HFN.Common.LocalizedFontCollection: {fileID: 2800000, guid: 931b36eef7cd8ed4ba5ad4469edebf39,
+      type: 3}
+    HFN.Common.LocalizedStringCollection: {fileID: 2800000, guid: 113debf32afd25e479aa447afd99c887,
+      type: 3}
+    HFN.Common.OrientationManager: {fileID: 2800000, guid: 2e14133f2339e7248869e19182a0859c,
+      type: 3}
+    HFN.Common.RendererSpriteAtlasMapper: {fileID: 2800000, guid: b475c685213b36443b62e822c6a4877e,
+      type: 3}
+    HFN.Common.ScreenshotCamera: {fileID: 2800000, guid: 6eeeba95322516644a8113e52fcd406d,
+      type: 3}
+    HFN.Common.SoundListener: {fileID: 2800000, guid: 8fece64405d52ac46bab68c5993c20f2,
+      type: 3}
+    HFN.Common.SoundSource: {fileID: 2800000, guid: 972f88ddf1e17b242ac280ea1a5b977b,
+      type: 3}
+    HFN.Common.TweenAnchorOffset: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenAnchoredPosition: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenCameraFov: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenCameraOrthoSize: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenCameraViewportWH: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenCameraViewportXY: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenCanvasGroupAlpha: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenGroup: {fileID: 2800000, guid: a4bbdb54b3dbe4746b7a1df8f6acad73,
+      type: 3}
+    HFN.Common.TweenMaterialColor: {fileID: 2800000, guid: b216a1e2648dcf94b8d9c62f2e32ee46,
+      type: 3}
+    HFN.Common.TweenMaterialOffset: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenMaterialScale: {fileID: 2800000, guid: ef741fcb65c93fc49a9d5891a148a2d8,
+      type: 3}
+    HFN.Common.TweenPivotOffset: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenPosition: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenRotation: {fileID: 2800000, guid: fef13569f3823a843a7da13b05ced0af,
+      type: 3}
+    HFN.Common.TweenScale: {fileID: 2800000, guid: ef741fcb65c93fc49a9d5891a148a2d8,
+      type: 3}
+    HFN.Common.TweenSizeDelta: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.TweenSpriteColor: {fileID: 2800000, guid: b216a1e2648dcf94b8d9c62f2e32ee46,
+      type: 3}
+    HFN.Common.TweenTimescale: {fileID: 2800000, guid: b1c41d86cb0b73f4681fb5be18ec5c7f,
+      type: 3}
+    HFN.Common.UIManager: {fileID: 2800000, guid: 63ba06f2aa49f7b43bbe7cf26b17a423,
+      type: 3}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      '': Any
+    second:
+      enabled: 0
+      settings:
+        Exclude Android: 0
+        Exclude Editor: 0
+        Exclude Linux64: 0
+        Exclude OSXUniversal: 0
+        Exclude WebGL: 0
+        Exclude Win: 0
+        Exclude Win64: 0
+        Exclude WindowsStoreApps: 0
+        Exclude iOS: 0
+  - first:
+      Android: Android
+    second:
+      enabled: 1
+      settings:
+        CPU: ARMv7
+  - first:
+      Any: 
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+        DefaultValueInitialized: true
+        OS: AnyOS
+  - first:
+      Facebook: Win
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      Facebook: Win64
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: Linux64
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: Win
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      WebGL: WebGL
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+        DontProcess: false
+        PlaceholderPath: 
+        SDK: AnySDK
+        ScriptingBackend: AnyScriptingBackend
+  - first:
+      iPhone: iOS
+    second:
+      enabled: 1
+      settings:
+        AddToEmbeddedBinaries: false
+        CPU: AnyCPU
+        CompileFlags: 
+        FrameworkDependencies: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b250640bb19eaa49a366dd45ea91211, type: 3}
+  m_Name: Orion
+  m_EditorClassIdentifier: 
+  constellationName: Orion
+  pairs:
+  - starName1: Betelgeuse
+    starCoordinates1: {x: 3.189296, y: 151.36438, z: 19.682142}
+    starName2: Bellatrix
+    starCoordinates2: {x: 11.658576, y: 76.03613, z: 8.56012}
+  - starName1: Betelgeuse
+    starCoordinates1: {x: 3.189296, y: 151.36438, z: 19.682142}
+    starName2: Alnitak
+    starCoordinates2: {x: 18.918488, y: 224.8094, z: -7.651875}
+  - starName1: Alnitak
+    starCoordinates1: {x: 18.918488, y: 224.8094, z: -7.651875}
+    starName2: Saiph
+    starCoordinates2: {x: 10.444137, y: 195.31494, z: -33.326706}
+  - starName1: Alnitak
+    starCoordinates1: {x: 18.918488, y: 224.8094, z: -7.651875}
+    starName2: Alnilam
+    starCoordinates2: {x: 62.775124, y: 602.66693, z: -12.712683}
+  - starName1: Alnilam
+    starCoordinates1: {x: 62.775124, y: 602.66693, z: -12.712683}
+    starName2: Mintaka
+    starCoordinates2: {x: 25.868116, y: 210.72966, z: -1.108306}
+  - starName1: Mintaka
+    starCoordinates1: {x: 25.868116, y: 210.72966, z: -1.108306}
+    starName2: Bellatrix
+    starCoordinates2: {x: 11.658576, y: 76.03613, z: 8.56012}
+  - starName1: Mintaka
+    starCoordinates1: {x: 25.868116, y: 210.72966, z: -1.108306}
+    starName2: Rigel
+    starCoordinates2: {x: 51.601105, y: 256.7099, z: -37.74005}

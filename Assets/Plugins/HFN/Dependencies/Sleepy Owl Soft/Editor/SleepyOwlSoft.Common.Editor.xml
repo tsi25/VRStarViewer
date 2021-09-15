@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SleepyOwlSoft.Common.Editor</name>
+    </assembly>
+    <members>
+        <member name="F:SleepyOwl.CommonEditor.PropertyDrawerCache.PropertyDrawers">
+            <summary>
+            Dictionary containing Type-CustomPropertyDrawer associations.
+            </summary>
+        </member>
+        <member name="F:SleepyOwl.CommonEditor.PropertyDrawerCache.PropertyDrawerNames">
+            <summary>
+            Dictionary containing Type Name-CustomPropertyDrawer associations.
+            </summary>
+        </member>
+        <member name="F:SleepyOwl.CommonEditor.PropertyDrawerCache.PropertyNames">
+            <summary>
+            Dictionary containing short Type Name-AssemblyQualifiedName associations.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.RefreshPropertyDrawers">
+            <summary>
+            Rebuild associations between types and their property drawers.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.HasCustomPropertyDrawer(System.Type)">
+            <summary>
+            Returns true if the given type has a custom property drawer.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.HasCustomPropertyDrawer(System.String)">
+            <summary>
+            Returns true if the given type Name has a custom property drawer.
+            Use this when only the base Name is available for a given type.
+            </summary>
+            <param name="typeName">Base type Name to search for an associated propert drawer.</param>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.GetPropertyDrawer(System.Type)">
+            <summary>
+            Returns the <see cref="T:System.Type"/> of the given type's custom property drawer.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.GetPropertyDrawer(System.String)">
+            <summary>
+            Returns the <see cref="T:System.Type"/> of the given type's custom property drawer.
+            Use this when only the base Name is available for a given type.
+            </summary>
+            <param name="typeName">Base Name of the target Type.</param>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.GetPropertyDrawerName(System.Type)">
+            <summary>
+            Returns the AssemblyQualifiedName of the given type's custom property drawer.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.DrawPropertyDrawer(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a custom property drawer for the given property.
+            If no custom property is found, will draw the default field.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.CommonEditor.PropertyDrawerCache.GetAttribute``1(System.Type)">
+            <summary>
+            Returns the first attribute of a given attribute type on a target type.
+            </summary>
+            <typeparam name="T">Type of attribute to search for.</typeparam>
+            <param name="type">The <see cref="T:System.Type"/> to find attributes for.</param>
+        </member>
+    </members>
+</doc>

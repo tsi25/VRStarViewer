@@ -1,0 +1,3157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HFN.Common.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:HFN.CommonEditor.Actors.ActorEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.Actors.Actor"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.ActorIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.Actors.ActorIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.ActorIdPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Actors.ActorId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.ActorAbilityGroupIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.Actors.ActorAbilityGroupIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.ActorAbilityGroupIdDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Actors.ActorAbilityGroupId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.ActorAbilityIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.Actors.ActorAbilityIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.ActorAbilityIdDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Actors.ActorAbilityId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.StatIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.Actors.StatIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.StatIdPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Actors.StatId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.TargetObjectDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Actors.TargetObject"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Actors.TargetValuePropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Actors.TargetValue"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AnimatorClipLengthDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.AnimatorClipLength"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AnimatorParamValueDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.AnimatorParamValue"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AnimatorParameterDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.AnimatorParameter"/>.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.Attributes.AnimatorTargetDrawer.breakGUI">
+            <summary>
+            Used to let property drawers derived from <see cref="T:HFN.CommonEditor.Attributes.AnimatorTargetDrawer"/> know they should not draw their custom editors.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.Attributes.AnimatorTargetDrawer.TargetIsInScene(UnityEditor.SerializedProperty)">
+            <summary>
+            Checks if the selected GameObject is in a scene.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> being drawn by this attribute drawer.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.Attributes.AnimatorTargetDrawer.TargetIsAnimator(UnityEditor.SerializedProperty)">
+            <summary>
+            Checks that the field specified by the attribute is an <see cref="T:UnityEngine.Animator"/> field.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> being drawn by this attribute drawer.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.Attributes.AnimatorTargetDrawer.GetReference(UnityEditor.SerializedProperty)">
+            <summary>
+            Gets a reference to the specified animator field's <see cref="T:UnityEngine.Animator"/> value.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> being drawn by this attribute drawer.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.AnimatorParamIdAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.AnimatorParamIdAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.AssetReferenceAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.AssetReferenceAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.BitMaskPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.BitMaskAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.TooltipHeaderAttributeDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.Attributes.TooltipHeaderAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.HelpBoxAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.HelpBoxAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.FieldColorAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.FieldColorAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.NullColorAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.NullColorAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.FieldSizeAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.FieldSizeAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.InterfaceFieldAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.InterfaceFieldAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.PrefabOnlyAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.PrefabOnlyAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.HiddenAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.HiddenAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.IndentAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.IndentAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.DisplayLabelAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.DisplayLabelAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.MaterialIndexAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.MaterialIndexAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.NavMeshAreaMaskAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.NavMeshAreaMaskAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.NavMeshAreaNameAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.NavMeshAreaNameAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.ClampedValueAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.ClampedValueAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.RangeWithinRangeAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.RangeWithinRangeAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.RangeWithinRangeIntAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.RangeWithinRangeIntAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.AssemblyTagAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.AssemblyTagAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.PasswordAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.PasswordAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.FilePathAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.FilePathAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.SceneNameAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.SceneNameAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.TexturePreviewAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.TexturePreviewAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.ArraySizeCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.ArraySizeCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.MultiBoolCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.MultiBoolCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.MultiValueCheckAttributeDrawer">
+            <summary>
+            Base property drawer for <see cref="T:HFN.Common.Attributes.MultiValueCheckAttribute"/> derived classes.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.Attributes.MultiValueCheckAttributeDrawer.TypeMismatchWarning">
+            <summary>
+            Warning shown when the target fields do not match expected types.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.Attributes.MultiValueCheckAttributeDrawer.NullPropertyWarning">
+            <summary>
+            Warning shown when a target field doesn't exist. (Usually from a spelling error or being deleted at a later point)
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.ValueCheckAttributeDrawer">
+            <summary>
+            Base property drawer for <see cref="T:HFN.Common.Attributes.ValueCheckAttribute"/> derived classes.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.Attributes.ValueCheckAttributeDrawer.TypeMismatchWarning">
+            <summary>
+            Warning shown when the target fields do not match expected types.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.Attributes.ValueCheckAttributeDrawer.NullPropertyWarning">
+            <summary>
+            Warning shown when a target field doesn't exist. (Usually from a spelling error or being deleted at a later point)
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.FloatCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.FloatCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.MultiFloatCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.MultiFloatCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.IntCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.IntCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.MultiIntCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.MultiIntCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.MultiNullCheckAttributeDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.Attributes.MultiNullCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.NullCheckAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.NullCheckAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Attributes.VectorRangeAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Attributes.VectorRangeAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.MixerParameterDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.MixerParameter"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundIdPropertyDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.SoundIdAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDSoundEffectSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.GUIDSoundEffectSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDSoundMusicSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.GUIDSoundMusicSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDSoundSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.GUIDSoundSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDSoundSpeechSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.GUIDSoundSpeechSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundEffectSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.SoundEffectSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundMusicSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.SoundMusicSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.SoundSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundSpeechSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.SoundSpeechSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundCollectionInspector">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.SoundCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SoundDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.Sound"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CollectionEditor">
+            <summary>
+            Base custom editor for classed derived from <see cref="T:HFN.Common.Collection"/>. Not actually able to be a fallback editor because each derived class must actually derive from <see cref="T:HFN.Common.Collection`1"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CollectionEditorUtility">
+            <summary>
+            Utility class for <see cref="T:HFN.Common.Collection"/> editor functionality.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CollectionEditorUtility.RefreshEditorCollections">
+            <summary>
+            Refreshes the <see cref="T:HFN.Common.Collection"/> assets referenced by <see cref="T:HFN.CommonEditor.CollectionEditorUtility"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CollectionEditorUtility.DrawCollectionItem``1(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent,System.Collections.Generic.List{``0})">
+            <summary>
+            Draw a dropdown for the target <see cref="T:HFN.Common.CollectionItem"/> values.
+            </summary>
+            <typeparam name="T">The type of <see cref="T:HFN.Common.CollectionItem"/> values to populate the dropdown with.</typeparam>
+            <param name="position">Position to draw the dropdown at.</param>
+            <param name="prop"><see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="label">Label for the dropdown.</param>
+            <param name="defaultItems">Default items to populate the dropdown with.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CollectionEditorUtility.DrawCollectionItem``2(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent,System.Collections.Generic.List{``0})">
+            <summary>
+            Draw a dropdown for the target <see cref="T:HFN.Common.CollectionItem"/> values.
+            </summary>
+            <typeparam name="T1">The type of <see cref="T:HFN.Common.CollectionItem"/> values to populate the dropdown with.</typeparam>
+            <typeparam name="T2">The type of <see cref="T:HFN.Common.CollectionItem"/> values to grab for the dropdown.</typeparam>
+            <param name="position">Position to draw the dropdown at.</param>
+            <param name="prop"><see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="label">Label for the dropdown.</param>
+            <param name="defaultItems">Default items to populate the dropdown with.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CollectionEditorUtility.ExportCSV``1(HFN.Common.Collection{``0})">
+            <summary>
+            Export the given <see cref="T:HFN.Common.Collection"/>'s items as a CSV file.
+            </summary>
+            <param name="collection">The <see cref="T:HFN.Common.Collection"/> to export a CSV for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CollectionEditorUtility.GetNewCollectionHash``1(System.Int32)">
+            <summary>
+            Returns a hash number that can be used for a new collection of the given type.
+            </summary>
+            <typeparam name="T">The type of the collection. Used to calculate the correct hash.</typeparam>
+            <param name="buffer">Round up to the next amount that is a multiple of this buffer. (A max hash of 42 with a buffer of 10 will round up to 50, the next multiple of 10.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.CollectionPostprocessor">
+            <summary>
+            Utility class used to detect when a <see cref="T:HFN.Common.Collection"/> asset is created and refresh the collections referenced by <see cref="T:HFN.CommonEditor.CollectionEditorUtility"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ConfigIdAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.ConfigIdAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ConfigIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.ConfigIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ConfigIdDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.ConfigId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.DebugTypeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.DebugType"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorAnimatorExtensions">
+            <summary>
+            Extension class containing convenient editor functionality for animators.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAnimatorExtensions.GetAnimatorController``1(UnityEngine.RuntimeAnimatorController)">
+            <summary>
+            Returns a reference to the editor specific version of a <see cref="T:UnityEngine.RuntimeAnimatorController"/>.
+            This works for both <see cref="T:UnityEditor.Animations.AnimatorController"/> and <see cref="T:UnityEngine.AnimatorOverrideController"/> types.
+            </summary>
+            <param name="controller">The <see cref="T:UnityEngine.RuntimeAnimatorController"/> being referenced.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAnimatorExtensions.GetAnimatorController``1(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns a reference to the editor specific version of a <see cref="T:UnityEngine.RuntimeAnimatorController"/> reference.
+            This works for both <see cref="T:UnityEditor.Animations.AnimatorController"/> and <see cref="T:UnityEngine.AnimatorOverrideController"/> types.
+            </summary>
+            <param name="controllerProperty">The <see cref="T:UnityEngine.RuntimeAnimatorController"/> being referenced.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAnimatorExtensions.GetParameterFromID(UnityEngine.RuntimeAnimatorController,System.Int32)">
+            <summary>
+            Grabs a specific parameter from an <see cref="T:UnityEditor.Animations.AnimatorController"/>.
+            </summary>
+            <param name="controller">The <see cref="T:UnityEditor.Animations.AnimatorController"/> to grab the parameter from.</param>
+            <param name="id">The hash for the target parameter.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.ExposedReferenceEditorExtensions.SetExposedReferenceValue``1(UnityEngine.ExposedReference{``0},UnityEngine.Playables.PlayableDirector,``0,System.Boolean)">
+            <summary>
+            Sets the reference of an <see cref="T:UnityEngine.ExposedReference`1"/> value.
+            </summary>
+            <typeparam name="T">The type of the exposed reference.</typeparam>
+            <param name="reference">The <see cref="T:UnityEngine.ExposedReference`1"/> value to set.</param>
+            <param name="director">The <see cref="T:UnityEngine.Playables.PlayableDirector"/> containing exposed reference's parent clip.</param>
+            <param name="value">The value to set the exposed reference to.</param>
+            <param name="generateExposedName">If true, will generate the exposed name of the target exposed reference. (This is needed for the value to actually be set.)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.ExposedReferenceEditorExtensions.SetExposedReferenceValue``1(UnityEngine.ExposedReference{``0},UnityEngine.Playables.PlayableGraph,UnityEngine.Object,System.Boolean)">
+            <summary>
+            Sets the reference of an <see cref="T:UnityEngine.ExposedReference`1"/> value.
+            </summary>
+            <typeparam name="T">The type of the exposed reference.</typeparam>
+            <param name="reference">The <see cref="T:UnityEngine.ExposedReference`1"/> value to set.</param>
+            <param name="graph">The <see cref="T:UnityEngine.Playables.PlayableGraph"/> containing exposed reference's parent clip.</param>
+            <param name="value">The value to set the exposed reference to.</param>
+            <param name="generateExposedName">If true, will generate the exposed name of the target exposed reference. (This is needed for the value to actually be set.)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.ExposedReferenceEditorExtensions.SetExposedReferenceValue``1(UnityEngine.ExposedReference{``0},UnityEngine.IExposedPropertyTable,UnityEngine.Object,System.Boolean)">
+            <summary>
+            Sets the reference of an <see cref="T:UnityEngine.ExposedReference`1"/> value.
+            </summary>
+            <typeparam name="T">The type of the exposed reference.</typeparam>
+            <param name="reference">The <see cref="T:UnityEngine.ExposedReference`1"/> value to set.</param>
+            <param name="exposedPropertyTable">The <see cref="T:UnityEngine.IExposedPropertyTable"/> containing exposed reference.</param>
+            <param name="value">The value to set the exposed reference to.</param>
+            <param name="generateExposedName">If true, will generate the exposed name of the target exposed reference. (This is needed for the value to actually be set.)</param>
+        </member>
+        <member name="T:HFN.CommonEditor.MeshExtensionsMenuItems">
+            <summary>
+            Class containing <see cref="T:UnityEditor.MenuItem"/> commands relating to <see cref="T:UnityEngine.Mesh"/> functions.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SerializedPropertyExtensions">
+            <summary>
+            Class containing extension methods for the <see cref="T:UnityEditor.SerializedProperty"/> class.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetPropertyLabel(UnityEditor.SerializedProperty)">
+            <summary>
+            Creates a new <see cref="T:UnityEngine.GUIContent"/> to represent the target property's label.
+            </summary>
+            <param name="property">The property to generate a label from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetPropertyTypeString(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns a string representing the <see cref="T:System.Type"/> name of the property type with Unity's field formatting stripped.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> to get the type string for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetChildProperties(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns an array of <see cref="T:UnityEditor.SerializedProperty"/> values below the given property.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> to grab child properties from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetSiblingProperty(UnityEditor.SerializedProperty,System.String)">
+            <summary>
+            Returns a sibling property to the given serialized property.
+            </summary>
+            <param name="property">The property to get a sibling property for.</param>
+            <param name="siblingPropertyName">Name of the property to look for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetParentProperty(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns the parent property of a given serialized property.
+            </summary>
+            <param name="property">The property to get the parent property for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetObjectReference``1(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns a field's object reference, taking into account if the field is an exposed reference.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> to cast the object reference to.</typeparam>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetObjectReferenceAtIndex``1(UnityEditor.SerializedProperty,System.Int32)">
+            <summary>
+            Returns the object reference for an element in an array <see cref="T:UnityEditor.SerializedProperty"/>.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> to cast the object reference to.</typeparam>
+            <param name="property">The array <see cref="T:UnityEditor.SerializedProperty"/> to grab an object reference from.</param>
+            <param name="index">The index for the target object in the array.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetObjectReferenceInstanceID(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns a field's object reference instance ID, taking into account if the field is an exposed reference.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetObjectReferenceInstanceIDAtIndex(UnityEditor.SerializedProperty,System.Int32)">
+            <summary>
+            Returns the instance ID of an object reference for an element in an array <see cref="T:UnityEditor.SerializedProperty"/>.
+            </summary>
+            <param name="property">The array <see cref="T:UnityEditor.SerializedProperty"/> to grab an object instance ID from.</param>
+            <param name="index">The index for the target object in the array.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.SetObjectReference(UnityEditor.SerializedProperty,UnityEngine.Object)">
+            <summary>
+            Sets a field's object reference, taking into account if the field is an exposed reference.
+            </summary>
+            <param name="value">The object to set the reference value to.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetArraySizeProperty(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns the serialized property for an array's size, given a serialized property for an array.
+            </summary>
+            <param name="property">The array property to get the size property for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetStartArrayElement(UnityEditor.SerializedProperty)">
+            <summary>
+            Gets the element at the start of an array <see cref="T:UnityEditor.SerializedProperty"/>.
+            </summary>
+            <param name="property">The array <see cref="T:UnityEditor.SerializedProperty"/> to get the value from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.GetEndArrayElement(UnityEditor.SerializedProperty)">
+            <summary>
+            Gets the element at the end of an array <see cref="T:UnityEditor.SerializedProperty"/>.
+            </summary>
+            <param name="property">The array <see cref="T:UnityEditor.SerializedProperty"/> to get the value from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.InsertStartArrayElement(UnityEditor.SerializedProperty)">
+            <summary>
+            Adds an element at the start of an array <see cref="T:UnityEditor.SerializedProperty"/>.
+            </summary>
+            <param name="property">The array <see cref="T:UnityEditor.SerializedProperty"/> to add the element to.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SerializedPropertyExtensions.InsertEndArrayElement(UnityEditor.SerializedProperty)">
+            <summary>
+            Adds an element at the end of an array <see cref="T:UnityEditor.SerializedProperty"/>.
+            </summary>
+            <param name="property">The array <see cref="T:UnityEditor.SerializedProperty"/> to add the element to.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.SpriteAtlasEditorUtility">
+            <summary>
+            Utility class for accessing editor specific functionality for <see cref="T:UnityEngine.U2D.SpriteAtlas"/> assets.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteGUIDs(System.Int32)">
+            <summary>
+            Returns an array of GUIDs for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="instanceID">Instance ID for the <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset to grab packed sprite GUIDs from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteGUIDs(System.String)">
+            <summary>
+            Returns an array of GUIDs for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="guid">GUID for the <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset to grab packed sprite GUIDs from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteGUIDs(UnityEngine.U2D.SpriteAtlas)">
+            <summary>
+            Returns an array of GUIDs for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="atlas">The <see cref="T:UnityEngine.U2D.SpriteAtlas"/> to grab packed sprite GUIDs from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteGUIDs(UnityEditor.SerializedObject)">
+            <summary>
+            Returns an array of GUIDs for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="atlas">A <see cref="T:UnityEditor.SerializedObject"/> for the <see cref="T:UnityEngine.U2D.SpriteAtlas"/> to grab packed sprite GUIDs from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteNames(System.Int32)">
+            <summary>
+            Returns an array of names for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="instanceID">Instance ID for the <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset to grab packed sprite names from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteNames(System.String)">
+            <summary>
+            Returns an array of names for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="guid">GUID for the <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset to grab packed sprite names from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteNames(UnityEngine.U2D.SpriteAtlas)">
+            <summary>
+            Returns an array of names for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="atlas">The <see cref="T:UnityEngine.U2D.SpriteAtlas"/> to grab packed sprite names from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteNames(UnityEditor.SerializedObject)">
+            <summary>
+            Returns an array of names for sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="atlas">A <see cref="T:UnityEditor.SerializedObject"/> for the <see cref="T:UnityEngine.U2D.SpriteAtlas"/> to grab packed sprite names from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteLabels(System.String)">
+            <summary>
+            Returns an alphabetically sorted array of <see cref="T:UnityEngine.GUIContent"/> values representing the sprites contained in a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            The content.text values replace underscores ( _ ) with forward slashes ( / ) so nested popup controls can be used.
+            The content.tooltip values are the actual names of the sprites.
+            </summary>
+            <param name="guid">GUID for a <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset in the project.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteLabels(System.Int32)">
+            <summary>
+            Returns an alphabetically sorted array of <see cref="T:UnityEngine.GUIContent"/> values representing the sprites contained in a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            The content.text values replace underscores ( _ ) with forward slashes ( / ) so nested popup controls can be used.
+            The content.tooltip values are the actual names of the sprites.
+            </summary>
+            <param name="instanceID">The instance ID of the target <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteLabels(UnityEngine.Object)">
+            <summary>
+            Returns an alphabetically sorted array of <see cref="T:UnityEngine.GUIContent"/> values representing the sprites contained in a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            The content.text values replace underscores ( _ ) with forward slashes ( / ) so nested popup controls can be used.
+            The content.tooltip values are the actual names of the sprites.
+            </summary>
+            <param name="atlas">Direct reference to a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteLabels(UnityEditor.SerializedObject)">
+            <summary>
+            Returns an alphabetically sorted array of <see cref="T:UnityEngine.GUIContent"/> values representing the sprites contained in a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            The content.text values replace underscores ( _ ) with forward slashes ( / ) so nested popup controls can be used.
+            The content.tooltip values are the actual names of the sprites.
+            </summary>
+            <param name="atlas">A <see cref="T:UnityEditor.SerializedObject"/> of a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteCount(System.String)">
+            <summary>
+            Returns the number of sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            NOTE: This will return 0 if the atlas has sprites but has not been packed yet.
+            </summary>
+            <param name="guid">GUID for a <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset in the project.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteCount(System.Int32)">
+            <summary>
+            Returns the number of sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            NOTE: This will return 0 if the atlas has sprites but has not been packed yet.
+            </summary>
+            <param name="instanceID">The instance ID of the target <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteCount(UnityEngine.Object)">
+            <summary>
+            Returns the number of sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            NOTE: This will return 0 if the atlas has sprites but has not been packed yet.
+            </summary>
+            <param name="atlas">Direct reference to a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAtlasSpriteCount(UnityEditor.SerializedObject)">
+            <summary>
+            Returns the number of sprites packed into a <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            NOTE: This will return 0 if the atlas has sprites but has not been packed yet.
+            </summary>
+            <param name="atlas"><see cref="T:UnityEditor.SerializedObject"/> for a <see cref="T:UnityEngine.U2D.SpriteAtlas"/> asset.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetOriginalSprite(UnityEditor.SerializedProperty)">
+            <summary>
+            Returns the original <see cref="T:UnityEngine.Sprite"/> targeted by the given <see cref="T:HFN.Common.AtlasSpriteSelector"/> serialized property.
+            </summary>
+            <param name="property">The <see cref="T:HFN.Common.AtlasSpriteSelector"/> serialized property to pull a sprite from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetOriginalSprite(UnityEngine.U2D.SpriteAtlas,System.String)">
+            <summary>
+            Returns the original <see cref="T:UnityEngine.Sprite"/> with the given name that is packed into the given <see cref="T:UnityEngine.U2D.SpriteAtlas"/>.
+            </summary>
+            <param name="atlas">The <see cref="T:UnityEngine.U2D.SpriteAtlas"/> to pull the sprite from.</param>
+            <param name="spriteName">The name of the <see cref="T:UnityEngine.Sprite"/> packed into the atlas.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.SpriteAtlasEditorUtility.GetAssetSprite(System.String,System.String)">
+            <summary>
+            Gets a target sprite from a texture asset.
+            </summary>
+            <param name="path">The path for the texture asset.</param>
+            <param name="spriteName">The name of the target sprite inside the texture atlas.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorFileManager">
+            <summary>
+            Class used to get around WebGL issues with <see cref="T:HFN.Common.FileManager"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.CopyFile(System.String,System.String)">
+            <summary>
+            Copy a file to a new location.
+            </summary>
+            <param name="filePath">The file to copy.</param>
+            <param name="destinationPath">The file to create from the copied file.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.DeleteFile(System.String)">
+            <summary>
+            Delete the file at the given path.
+            </summary>
+            <param name="filePath">Path for the file that will be deleted.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.GetDirectories(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Returns all of the directories below the specified directory.
+            </summary>
+            <param name="path">Path to the directory whose sub-directories should be found.</param>
+            <param name="relative">Is the given path relative to the project folder?</param>
+            <param name="searchSubdirectories">Specifies whether the search operation should include folders from all subdirectories or only the target directory.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.GetDirectories(System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Returns all of the directories below the specified directory.
+            </summary>
+            <param name="path">Path to the directory whose sub-directories should be found.</param>
+            <param name="relative">Is the given path relative to the project folder?</param>
+            <param name="searchPattern">The search string to match against the names of subdirectories in path.</param>
+            <param name="searchSubdirectories">Specifies whether the search operation should include folders from all subdirectories or only the target directory.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.GetFiles(System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Searches a given directory and returns paths for files that match the specified search pattern.
+            </summary>
+            <param name="path">Path for the directory to search.</param>
+            <param name="relative">Is the directory's path relative to the project folder?</param>
+            <param name="searchPattern">Search pattern to use when searching for files.</param>
+            <param name="searchSubdirectories">Should folders below the target directory be searched through as well?</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.GetFiles(System.String,System.String[])">
+            <summary>
+            Gets the files at the given directory path.
+            If the path is not a directory, returns the file path.
+            </summary>
+            <param name="path">The absolute file path to examine.</param>
+            <param name="acceptedExtensions">The file extensions to allow. If empty will show all files (not including directories).</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.GetFiles(System.String,System.Boolean,System.Boolean,System.String[])">
+            <summary>
+            Gets the files at the given directory path.
+            If the path is not a directory, returns the file path.
+            (This does not return meta files unless the "meta" extension is explicitly searched for)
+            </summary>
+            <param name="path">The file path to examine.</param>
+            <param name="relative">Is the given path relative to the project folder?</param>
+            <param name="searchSubdirectories">Should folders below the target directory be searched through as well?</param>
+            <param name="acceptedExtensions">The file extensions to allow. If empty will show all files (not including directories).</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.DirectoryExists(System.String)">
+            <summary>
+            Checks if a directory exists at the specified path
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.FileExists(System.String)">
+            <summary>
+            Checks if a file exists at the specified path.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.ReadText(System.String,System.Boolean)">
+            <summary>
+            Reads the given file's text into a usable string.
+            </summary>
+            <param name="path">The path to the file.</param>
+            <param name="relative">If true, the path is interpreted to be relative to the project folder.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.ReadLines(System.String,System.Boolean)">
+            <summary>
+            Reads the given file's text into usable strings, line by line.
+            </summary>
+            <param name="path">The path to the file.</param>
+            <param name="relative">If true, the path is interpreted to be relative to the project folder.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.WriteText(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Writes some text to a file. This will override whatever text is contained in the file if it already exists.
+            Use <see cref="M:HFN.CommonEditor.EditorFileManager.AppendText(System.String,System.String,System.Boolean,System.Boolean)"/> to add text to an file's contents without overwriting it completely.
+            </summary>
+            <seealso cref="M:HFN.CommonEditor.EditorFileManager.AppendText(System.String,System.String,System.Boolean,System.Boolean)"/>
+            <param name="path">The path to the file.</param>
+            <param name="content">The text content to write to the file.</param>
+            <param name="relative">If true, the path is interpreted to be relative to the project folder.</param>
+            <param name="create">If true, a new file will be created if one doesn't exist at the given path.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.AppendText(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Appends some text to a file's existing contents.
+            </summary>
+            <param name="path">The path to the file.</param>
+            <param name="content">The text content to write to the file.</param>
+            <param name="relative">If true, the path is interpreted to be relative to the project folder.</param>
+            <param name="create">If true, a new file will be created if one doesn't exist at the given path.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.WriteLines(System.String,System.String[],System.Boolean,System.Boolean)">
+            <summary>
+            Writes the given lines of text to a file.
+            </summary>
+            <param name="path">The path to write the file to.</param>
+            <param name="lines">The lines of text to write to the file. Each element in the array is a line.</param>
+            <param name="relative">Is the given path relative to the project folder?</param>
+            <param name="create">Create a file if one doesn't exist at the target path.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.CreateFile(System.String,System.Byte[])">
+            <summary>
+            Create a file at the given path containing the given bytes.
+            </summary>
+            <param name="path">The path for the file to create.</param>
+            <param name="bytes">The bytes for the data to write to the file.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorFileManager.CreateDirectory(System.String)">
+            <summary>
+            Creates a directory at the given path.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.FormationEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.Formation"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GuiDisplayCursorEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.GuiDisplayCursor"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GuiDisplayEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.GuiDisplay"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GuiDisplayMenuItems">
+            <summary>
+            Contains menu items for creating <see cref="T:HFN.Common.GuiDisplay"/> related objects in the hierarchy.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GuiDisplayMenuItems.OnGuiDisplayCreated">
+            <summary>
+            Event fired when a <see cref="T:HFN.Common.GuiDisplay"/> is created.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GuiDisplayMenuItems.CreateGUIDisplay">
+            <summary>
+            Create a <see cref="T:HFN.Common.GuiDisplay"/> object in the scene.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GuiDisplayMenuItems.CreateGUIDisplayZone">
+            <summary>
+            Create a <see cref="T:HFN.Common.GuiDisplayZone"/> object in the scene.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.LanguageCodeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.LanguageCode"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.LocalizationPreferences">
+            <summary>
+            Class containing data for localization preferences.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.LocalizedFontDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.LocalizedFont"/> structs.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.LocalizedStringDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.LocalizedString"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.LocalizedStringSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.LocalizedStringSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.RendererMaterialDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.RendererMaterial"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ParticleCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.ParticleCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ParticleControllerEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.ParticleController"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ParticleIdAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.ParticleIdAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ParticleSubsystemIdAttributeDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.ParticleSubsystemIdAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorAudioUtility">
+            <summary>
+            Class accessing Unity's internal editor audio functionality.
+            Source: https://forum.unity3d.com/threads/reflected-audioutil-class-for-making-audio-based-editor-extensions.308133/
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorAudioUtility.AudioUtilClass">
+            <summary>
+            The internal AudioUtil class inside the UnityEditor assembly.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorGameViewUtility">
+            <summary>
+            Wrapper class to access internal UnityEditor.GameView functionality.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorGameViewUtility.GameViewClass">
+            <summary>
+            The internal AudioUtil class inside the UnityEditor assembly.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorGameViewUtility.GetMainGameView">
+            <summary>
+            Returns the main UnityEditor.GameView editor window.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorGameViewUtility.GetMainGameViewSize">
+            <summary>
+            Returns the size, in pixels, of the main UnityEditor.GameView editor window.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorGameViewUtility.GetMainGameViewSizeIndex">
+            <summary>
+            Returns the current selected size index for the main UnityEditor.GameView editor window.
+            This index order is determined by the size dropdown shown in the window.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorGameViewUtility.SetMainGameViewSizeIndex(System.Int32)">
+            <summary>
+            Sets the current selected size index for the main UnityEditor.GameView editor window.
+            This index order is determined by the size dropdown shown in the window.
+            </summary>
+            <param name="sizeIndex">The index for the target size. (0 is Free Aspect)</param>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorReflectionUtility">
+            <summary>
+            Class containing basic references needed to access internal UnityEditor functionality via reflection.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorReflectionUtility.UnityEditorAssembly">
+            <summary>
+            The UnityEditor assembly.
+            Used to access specific Editor internal scripts.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SceneCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.SceneCollection"/> assets.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SceneIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.SceneIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.SceneIdDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.SceneId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ClientConfigUtility">
+            <summary>
+            Class used for editor related <see cref="T:HFN.Common.ClientConfig"/> functionality.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ClientEditor">
+            <summary>
+            Base custom editor for <see cref="T:HFN.Common.Client"/> and its child classes.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ClientEditorUtility">
+            <summary>
+            Helper class to get around UNITY_EDITOR compilation flags in <see cref="T:HFN.Common.Client"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.ClientEditorUtility.CreateAndAddComponent``1(System.String)">
+            <summary>
+            Creates a new GameObject with the given name and component and parents it to the Client.
+            </summary>
+            <typeparam name="T">The <see cref="T:HFN.Common.ISingleton"/> derived component to add to the new object.</typeparam>
+            <param name="name">The name of the new object.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.ClientEditorUtility.CheckComponent``1">
+            <summary>
+            Checks if the givent Type is below the client.
+            </summary>
+            <typeparam name="T">The type, derived from <see cref="T:HFN.Common.ISingleton"/>, to search for.</typeparam>
+        </member>
+        <member name="T:HFN.CommonEditor.AtlasSpriteSelectorDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.AtlasSpriteSelector"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AtlasSpriteSelectorEditorUtility">
+            <summary>
+            Editor utility class for <see cref="T:HFN.Common.AtlasSpriteSelector"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.AtlasSpriteSelectorEditorUtility.ConvertToJson(HFN.Common.AtlasSpriteSelector)">
+            <summary>
+            Exports a <see cref="T:SleepyOwl.Common.JsonObject"/> representing an <see cref="T:HFN.Common.AtlasSpriteSelector"/>.
+            </summary>
+            <param name="selector">The <see cref="T:HFN.Common.AtlasSpriteSelector"/> to export JSON data for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.AtlasSpriteSelectorEditorUtility.ConvertFromJson(SleepyOwl.Common.JsonObject)">
+            <summary>
+            Returns an <see cref="T:HFN.Common.AtlasSpriteSelector"/> populated by JSON data.
+            </summary>
+            <param name="json">Data for the new <see cref="T:HFN.Common.AtlasSpriteSelector"/>.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.RendererSpriteAtlasMapperEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.RendererSpriteAtlasMapper"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EnumInfo.GetIndex(System.Int32)">
+            <summary>
+            Returns the index of the given value.
+            </summary>
+            <param name="value">Value to retrieve the index for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EnumInfo.GetValue(System.Int32)">
+            <summary>
+            Returns the value at the given index for the Enum.
+            </summary>
+            <param name="index">The index to search for.</param>
+        </member>
+        <member name="F:HFN.CommonEditor.ImporterSettingsEditor.ignoreFields">
+            <summary>
+            Fields that should be ignored when drawing the inspector.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ImporterSettingsEditor.specialFields">
+            <summary>
+            Fields that should have special drawers in the inspector.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.ImporterSettingsEditor.SortFields">
+            <summary>
+            Sort the import setting fields alphabetically.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ModelImportSettings">
+            <summary>
+            Utility class for storing and adjusting Model import settings.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ModelImportUtilWindow">
+            <summary>
+            Utility window for setting model import settings.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.DllSwapSettings">
+            <summary>
+            Class containing data for swapping DLLs with different compilation flags.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DllSwapSettings.targetDll">
+            <summary>
+            Reference to the DLL object that will be swapped.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DllSwapSettings.targetDllDocumentation">
+            <summary>
+            Optional reference to the taget DLL's documentation file (the file containing things like function and parameter descriptions).
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DllSwapSettings.targetEditorDll">
+            <summary>
+            Optional reference to the target DLL's editor DLL object that will be swapped.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DllSwapSettings.targetEditorDllDocumentation">
+            <summary>
+            Optional reference to the taget DLL's editor DLL documentation file (the file containing things like function and parameter descriptions).
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DllSwapSettings.folderPath">
+            <summary>
+            Path to the folder containing the target DLL's variant.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.DllSwapSettingsEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.CommonEditor.DllSwapSettings"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorAssemblyDefinitionsWindow">
+            <summary>
+            Tool for automatically finding all Editor folders at or below an asmdef file and creating editor specific asmdef files that reference the selected asmdef file.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.VersioningEditorUtility">
+            <summary>
+            Helper class for <see cref="T:HFN.CommonEditor.VersioningWindow"/> and various version related functions.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningEditorUtility.SUFFIX_ALPHA">
+            <summary>
+            Suffix for alpha version numbers.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningEditorUtility.SUFFIX_BETA">
+            <summary>
+            Suffix for beta version numbers.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningEditorUtility.KEY_SUFFIX">
+            <summary>
+            Key for EditorPreferences that stores the target version suffix type.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningEditorUtility.KEY_SUFFIX_CUSTOM">
+            <summary>
+            Key for EditorPreferences that stores the a custom version suffix.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningEditorUtility.KEY_AUTO_INCREMENT">
+            <summary>
+            Key for EditorPreferences that stores if the version number should autoincrement when making builds.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.VersioningEditorUtility.Version">
+            <summary>
+            The string value for the current version, including suffixes.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.VersioningEditorUtility.UpdateVersionFile">
+            <summary>
+            Update the version file with the current PlayerSettings.bundleVersion value.
+            Will create the file if it does not already exist.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.VersioningSuffix">
+            <summary>
+            Determines the suffix to apply to the game's version number.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningSuffix.None">
+            <summary>
+            Don't apply a suffix
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningSuffix.Alpha">
+            <summary>
+            Apply an 'a' suffix (1.0.0a)
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningSuffix.Beta">
+            <summary>
+            Apply a 'b' suffix (1.0.0b)
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningSuffix.Custom">
+            <summary>
+            Apply a custom suffix
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.VersioningWindow">
+            <summary>
+            Editor tool to easily adjust application version numbers.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningWindow.version">
+            <summary>
+            The version number currently used by the app.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningWindow.suffix">
+            <summary>
+            The type of suffix to apply to the version number.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningWindow.customSuffix">
+            <summary>
+            The custom suffix appended to version numbers.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.VersioningWindow.autoincrement">
+            <summary>
+            Automatically increment version number whenever a build is made.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.VersioningWindow.CachedVersion">
+            <summary>
+            The cached version number. (The version number currently being used by the app)
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.VersioningWindow.UpdatedVersion">
+            <summary>
+            The version number currently being edited in the VersioningWindow.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.GUIDRemappingTarget">
+            <summary>
+            Determines what files have their GUID and fileId remapped.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.GUIDRemappingTarget.AllAssets">
+            <summary>
+            Remap GUIDs and fileIds for all assets in the project.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.GUIDRemappingTarget.TargetFolder">
+            <summary>
+            Remap GUIDs and fileIds for all assets under a specific folder.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.GUIDRemappingResultsWindow">
+            <summary>
+            Editor window showing results from a GUID replacement operation.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.GUIDRemappingResultsWindow.SectionWrapper">
+            <summary>
+            Wrapper class because Unity doesn't serialize arrays of arrays.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.AssetGUIDReferenceWindow">
+            <summary>
+            Utility window for finding references to target assets.
+            This basically scans all assets and checks if they contain a reference to specified asset GUIDs.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.AssetGUIDReference">
+            <summary>
+            Contains data on how an asset's GUID should be referenced.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.AssetGUIDReference.type">
+            <summary>
+            How the asset's GUID is referenced.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.AssetGUIDReference.guid">
+            <summary>
+            The GUID for the target asset.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.AssetGUIDReference.asset">
+            <summary>
+            The asset with the GUID being referenced.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.GUIDRemapping.AssetGUIDReference.GUID">
+            <summary>
+            The GUID for the target asset.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.AssetGUIDReferenceDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.CommonEditor.GUIDRemapping.AssetGUIDReference"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.AssetGUIDType">
+            <summary>
+            Determines how GUIDs are populated.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.AssetGUIDType.Reference">
+            <summary>
+            GUID is populated from a direct asset reference.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.AssetGUIDType.String">
+            <summary>
+            GUID is manually entered.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection">
+            <summary>
+            Contains references and data for remapping script GUIDs.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.oldDataFile">
+            <summary>
+            File containing JSON data for the conversion targets' old GUID and FileID values.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.newDataFile">
+            <summary>
+            File containing JSON data for the conversion targets' new GUID and FileID values.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.renamingDataFile">
+            <summary>
+            File containing JSON data for scripts that have been renamed or had their namespaces changed.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.conversionType">
+            <summary>
+            Determines how the new data overwrites the old data.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.targetAssets">
+            <summary>
+            Determines what assets to remap GUIDs for.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.targetFolder">
+            <summary>
+            Folder containing assets to remap GUIDs for.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.renaming">
+            <summary>
+            Contains data on any class name or namespace changes between the two datasets.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection.GenerateRemappingData">
+            <summary>
+            Generates a list of how old scripts should be updated to new scripts.
+            Basically maps old fileIds and GUIDs to new ones.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollectionEditor.ExportScriptMissmatches">
+            <summary>
+            Export data on scripts with no exact match when attempting to remap GUIDs.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDNewMappingDataMaster">
+            <summary>
+            Utility data class used by <see cref="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingData">
+            <summary>
+            Contains data for a script's GUID and file ID values.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingData.scriptName">
+            <summary>
+            The name of the script class.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingData.scriptNamespace">
+            <summary>
+            The name of the script namespace.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingData.fileId">
+            <summary>
+            The file ID for the script file.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingData.guid">
+            <summary>
+            The GUID for the script reference.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataMaster">
+            <summary>
+            Utility data class used by <see cref="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataGenerationWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRenamingData">
+            <summary>
+            Contains data on which scripts have had their names changed and what their new names are.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRenamingData.oldName">
+            <summary>
+            The name used by the script previously.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRenamingData.oldNamespace">
+            <summary>
+            The namespace used by the script previously.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRenamingData.newName">
+            <summary>
+            The new name of the script.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRenamingData.newNamespace">
+            <summary>
+            The new namespace of the script.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRenamingDataMaster">
+            <summary>
+            Utility data class used by <see cref="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDMappingTarget">
+            <summary>
+            Determines what GUIDs and FileIDs are generated.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDMappingTarget.Source">
+            <summary>
+            Generate IDs for source scripts.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDMappingTarget.DLL">
+            <summary>
+            Generate IDs for DLL scripts.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDMappingTargetType">
+            <summary>
+            Determines how the target reference is handled.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDMappingTargetType.Reference">
+            <summary>
+            Directly reference an asset in the project.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDMappingTargetType.Path">
+            <summary>
+            Use a path to the target asset. (Allows for external GUID data generation)
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingType">
+            <summary>
+            Determines how GUIDs and FileIDs are generated when exporting data files.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingType.SourceToDLL">
+            <summary>
+            Converting from source code to a DLL file.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingType.SourceToSource">
+            <summary>
+            Converting from source code to source code with different GUIDs.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingType.DLLToSource">
+            <summary>
+            Converting from a DLL file to source code.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingType.DLLToDLL">
+            <summary>
+            Converting from a DLL to another DLL that may have differences. (different namespacing, renamed classes, etc)
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataGenerationWindow">
+            <summary>
+            EditorWindow allowing creation of data used by <see cref="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingWindow"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataGenerationWindow.GetFileID(System.Type)">
+            <summary>
+            Gets the fileId of the target type contained in a DLL.
+            These are generated with an MD4 hash.
+            Source scripts allways return a default value of 11500000.
+            </summary>
+            <param name="type">The type to get the fileId for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingDataGenerationWindow.GetScriptFullname(System.String)">
+            <summary>
+            Returns a scripts name (prefixed by its namespace if available)
+            </summary>
+            <param name="path">Path to the script file.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingPreviewWindow">
+            <summary>
+            Window allowing GUID references to be previewed before running the <see cref="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingWindow">
+            <summary>
+            EditorWindow allowing remapping of fileID and GUIDs for script references.
+            This allows projects to change how scripts are referenced (ie porting source code to DLLs).
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GUIDRemapping.ScriptGUIDRemappingWindow.DEFAULT_FILE_ID">
+            <summary>
+            fileID value when referencing source scripts.
+            DLL scripts use an MD4 hash of "s\0\0\0" + namespace + name for their fileID.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.PlayModeStartSceneWindow">
+            <summary>
+            Utility window to set the scene that is loaded when pressing the play button in editor.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScenePaletteData">
+            <summary>
+            Struct containing data used in <see cref="T:HFN.CommonEditor.ScenePaletteWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScenePaletteDataWindow">
+            <summary>
+            Editor window to adjust scene display data for <see cref="T:HFN.CommonEditor.ScenePaletteWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScenePaletteWindow">
+            <summary>
+            Window allowing quick selection and opening of scenes in the project.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScriptReferenceInfoCollection">
+            <summary>
+            Class containing data on how and what script references to search for.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceInfoCollection.scenes">
+            <summary>
+            The scenes to search through for script references.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceInfoCollection.scripts">
+            <summary>
+            The scripts to search for.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScriptReferenceResult">
+            <summary>
+            Data class used by <see cref="T:HFN.CommonEditor.ScriptReferenceResultWindow"/> to display results.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.objectScene">
+            <summary>
+            The scene the target object is part of.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.objectSceneReference">
+            <summary>
+            The asset reference for the objectScene.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.objectType">
+            <summary>
+            The type of the script reference.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.objectTypeFull">
+            <summary>
+            The type of the script reference, including namespace.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.objectName">
+            <summary>
+            The name of the target object.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.objectPath">
+            <summary>
+            The path from the root of the scene to the target object.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.ScriptReferenceResult.isAsset">
+            <summary>
+            The target object is a prefab or asset in the project, not a GameObject in a scene.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScriptReferenceResultWindow">
+            <summary>
+            Editor window used to display results from the <see cref="T:HFN.CommonEditor.ScriptReferenceWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScriptReferenceWindow">
+            <summary>
+            Editor tool to grab missing and target script references.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.TerrainTreeDataSaveWindow">
+            <summary>
+            Tool window to save terrain tree data as a standalone asset that can be loaded in later.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.TerrainTreeDataToolWindow">
+            <summary>
+            Tool window that saves and loads <see cref="T:HFN.Common.TerrainTreeData"/> to the active terrain in the scene.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GenerateTextureUtility">
+            <summary>
+            Utilty class containing helper functions for <see cref="T:HFN.CommonEditor.GenerateTextureWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CoreTweenerEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.CoreTweener"/> and its child classes.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CoreTweenerEditor.DrawBaseFields">
+            <summary>
+            Draw the fields contained by <see cref="T:HFN.Common.CoreTweener"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CoreTweenerEditor.DrawEventFields">
+            <summary>
+            Draw the events for the tween.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.TweenGroupEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.TweenGroup"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.HFN_ColorBlockDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.HFN_ColorBlock"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.DraggableBaseEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.DraggableBase"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioComponentContextItems">
+            <summary>
+            Class containing various context command methods for scripts related to <see cref="T:HFN.Common.IAspectRatioLayoutElement"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLayoutBaseEditor">
+            <summary>
+            Base editor for classes implementing <see cref="T:HFN.Common.IAspectRatioLayoutElement"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLayoutElementEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.AspectRatioLayoutElement"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLayoutManagerEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.AspectRatioLayoutManager"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLayoutGroupDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.AspectRatioLayoutGroup"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLayoutInfoDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.AspectRatioLayoutInfo"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.BaseLayoutInfoDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.BaseLayoutInfo"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.RectTransformLayoutInfoDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.RectTransformLayoutInfo"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioFallbackCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.AspectRatioFallbackCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioFallbackDataDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.AspectRatioFallbackData"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLabelEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.AspectRatioLabel"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioStringCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.AspectRatioStringCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.AspectRatioLayoutEditorUtility">
+            <summary>
+            Utility class for <see cref="T:HFN.Common.IAspectRatioLayoutElement"/> classes and aspect ratio related editor functionality.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.AspectRatioLayoutEditorUtility.GetLabelText(UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,System.String)">
+            <summary>
+            Returns a string formated as an aspect ratio (ie 16:9) based on serialized property values.
+            </summary>
+            <param name="property">The root serialized property.</param>
+            <param name="targetAspectRatio">Serialized property of a <see cref="T:HFN.Common.AspectRatioType"/> value.</param>
+            <param name="aspectRatioProperty">Property path to a <see cref="T:UnityEngine.Vector2"/> value representing width and height values for the target aspect ratio.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.OrientationInfoDrawer">
+            <summary>
+            Property drawer for <see cref="T:HFN.Common.OrientationInfo"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.HFN_SpriteDrawUtility">
+            <summary>
+            Class for internal UnityEditor functionality.
+            Basically just duplicate code of an existing UnityEditor.UI class because Unity loves locking down things programmers may want to access.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GameViewIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.GameViewIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GameViewIdDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.GameViewId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GameModalIdCollectionEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.GameModalIdCollection"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GameModalIdDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.GameModalId"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ModalOptionDrawer">
+            <summary>
+            Custom property drawer for <see cref="T:HFN.Common.ModalOption"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.StandardTweenGameModalEditor">
+            <summary>
+            Base class for <see cref="T:HFN.Common.StandardTweenGameModal"/> derived modal editors to use.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.StandardTweenGameModalEditor.UpdateIgnoreFields">
+            <summary>
+            Function to override to determine what fields will be ignored when drawing extra fields.
+            By default, this ignores the "m_Script" field as well as base <see cref="T:HFN.Common.GameModal"/>, <see cref="T:HFN.Common.TweenGameModal"/>, and <see cref="T:HFN.Common.StandardTweenGameModal"/> fields.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.TweenGameModalEditor">
+            <summary>
+            Base class for <see cref="T:HFN.Common.TweenGameModal"/> derived classes to use for their editors.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.TweenGameModalEditor.UpdateIgnoreFields">
+            <summary>
+            Function to override to determine what fields will be ignored when drawing extra fields.
+            By default, this ignores the "m_Script" field as well as base <see cref="T:HFN.Common.GameModal"/> and <see cref="T:HFN.Common.TweenGameModal"/> fields.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.TweenGameModalEditor.DrawBaseModalFields">
+            <summary>
+            Draw fields contained in all <see cref="T:HFN.Common.GameModal"/> classes.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.TweenGameModalEditor.DrawModalButtonFields">
+            <summary>
+            Draw fields for the modal's buttons.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.TweenGameModalEditor.DrawLabelFields">
+            <summary>
+            Draw fields for the modal's labels.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.TweenGameModalEditor.DrawTweenFields">
+            <summary>
+            Draw fields for the modal's tweens.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.FrameRateColorDrawer">
+            <summary>
+            Custom editor for <see cref="T:HFN.Common.FrameRateColor"/> structs.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.EditorAssemblyUtility.DefaultIgnoredAssemblies">
+            <summary>
+            Will ignore all assemblies below the listed names
+            ie "System" will prevent "System.Text" from displaying
+            Use a dot to include parent assemblies ("System." will exclude all but "System")
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAssemblyUtility.GetAssemblyNamespaces(System.Reflection.Assembly)">
+            <summary>
+            Returns a list of namespaces used in the target assembly.
+            </summary>
+            <param name="assembly">The <see cref="T:System.Reflection.Assembly"/> to grab namespaces from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAssemblyUtility.GetAssemblyNamespaceLabels(System.String)">
+            <summary>
+            Returns an array of <see cref="T:UnityEngine.GUIContent"/> values showing namespaces contained in the target assembly.
+            </summary>
+            <param name="assemblyName">The full name of the assembly to grab namespaces from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAssemblyUtility.GetAssemblyNamespaceLabels(System.Reflection.Assembly)">
+            <summary>
+            Returns an array of <see cref="T:UnityEngine.GUIContent"/> values showing namespaces contained in the target assembly.
+            </summary>
+            <param name="assembly">The <see cref="T:System.Reflection.Assembly"/> to grab namespaces from.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorAssemblyUtility.GenerateAssemblyLabels(System.String[],System.Boolean)">
+            <summary>
+            Returns an array of <see cref="T:UnityEngine.GUIContent"/> values with display names for the text and assembly names as the tooltip.
+            </summary>
+            <param name="ignoredAssemblies">Array of assemblies to exclude from the generated array. ie "System" will prevent "System.Text" from displaying. Use a dot to include parent assemblies ("System." will exclude all but "System")</param>
+            <param name="formatForNesting">If true, will replace Assembly dots ( . ) with forward slashes ( / ) so they are displayed in a nesting fashion.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.BuildOptionsUtility">
+            <summary>
+            Helper class for <see cref="T:HFN.CommonEditor.BuildOptionsWindow"/> and its functions.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.BuildOptionsUtility.SetOptions">
+            <summary>
+            Returns a <see cref="T:UnityEditor.BuildOptions"/> value with all options enabled through the <see cref="T:HFN.CommonEditor.BuildOptionsWindow"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.BuildOptionsWindow">
+            <summary>
+            Tool allowing easy access to parameters for custom HFN build commands.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.BuildOptionsWindow.OpenWindow">
+            <summary>
+            Open the <see cref="T:HFN.CommonEditor.BuildOptionsWindow"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.BuildOptionsWindow.SortFields">
+            <summary>
+            Sort the build option fields alphabetically.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorCoroutine">
+            <summary>
+            Simple implementation of coroutine working in the Unity Editor.
+            Originally based on the implementation used by TextMeshPro.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorCoroutine.#ctor(System.Collections.IEnumerator)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="routine">The coroutine to run.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorCoroutine.StartCoroutine(System.Collections.IEnumerator)">
+            <summary>
+            Starts and returns a new <see cref="T:HFN.CommonEditor.EditorCoroutine"/>.
+            </summary>
+            <param name="newCoroutine">Coroutine to run.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorCoroutine.Start">
+            <summary>
+            Register callback for editor updates
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorCoroutine.Stop">
+            <summary>
+            Unregister callback for editor updates.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.EditorCoroutine.EditorUpdate">
+            <summary>
+            Delegate function called on editor updates.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CustomEditorUtility">
+            <summary>
+            Utility class for various editor functions.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.CustomEditorUtility.VectorWidthThreshold">
+            <summary>
+            The minimum width of an inspector for Vector fields to use their same line property drawers.
+            If an inspector width is less than this, it will cause Vector fields to use two line heights when drawing.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CustomEditorUtility.Button">
+            <summary>
+            Class containing data for buttons shown in editor windows.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.CustomEditorUtility.Button.label">
+            <summary>
+            Label for the button.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.CustomEditorUtility.Button.width">
+            <summary>
+            Width of the button.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.CustomEditorUtility.Button.enabled">
+            <summary>
+            If true, the button will be interactable.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.CustomEditorUtility.Button.color">
+            <summary>
+            The color of the button.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.CustomEditorUtility.Button.action">
+            <summary>
+            Callback to invoke when the button is clicked.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.CustomEditorUtility.StandardVerticalPadding">
+            <summary>
+            Standard padding used at the top and bottom of a vertical layout group.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.CustomEditorUtility.EditorColor">
+            <summary>
+            Color of the editor background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.CustomEditorUtility.EditorOutlineColor">
+            <summary>
+            Color for outlines based on editor skin color. This is the invert of <see cref="P:HFN.CommonEditor.CustomEditorUtility.EditorColor"/>.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.CustomEditorUtility.DefaultAssetsBundle">
+            <summary>
+            Returns the asset bundle containing default editor assets.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.GetContent(System.String)">
+            <summary>
+            Returns a <see cref="T:UnityEngine.GUIContent"/> made from a single string. Use a '|' char to separate the Text from the Tooltip (ie "text|tooltip")
+            </summary>
+            <param name="textAndTooltip">String containing both the text and tooltop for a <see cref="T:UnityEngine.GUIContent"/> separated by a '|' char.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.SelectOrReveal(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Selects an object at the given path if it is inside the Assets folder, or reveals it in finder if it is outside the project.
+            </summary>
+            <param name="path">The path to examine.</param>
+            <param name="relative">If true, the path is relative to the project folder. NOTE: This is the root folder for the entire project, not the Assets folder.</param>
+            <param name="refresh">If true, will reimport the asset before selecting it. This has no effect if the path is outside the project.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawSprite(UnityEngine.Rect,UnityEngine.Sprite)">
+            <summary>
+            Draws a sprite's texture in the given position. This draws the individual sprite, not the total sprite texture.
+            </summary>
+            <param name="position">The position to draw the sprite at.</param>
+            <param name="sprite">The sprite to draw.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawDivide(System.Single,System.Single)">
+            <summary>
+            Draw a solid color line to divide custom inspectors or editor windows.
+            </summary>
+            <param name="height">Height of the divide line.</param>
+            <param name="padding">Padding on each side of the divide from the window edges.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawDivide(UnityEngine.Color,System.Single,System.Single)">
+            <summary>
+            Draw a solid color line to divide custom inspectors or editor windows.
+            </summary>
+            <param name="color">Color of the divide line.</param>
+            <param name="height">Height of the divide line.</param>
+            <param name="padding">Padding on each side of the divide from the window edges.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawClickArea(UnityEngine.Rect,System.Action,UnityEditor.MouseCursor)">
+            <summary>
+            Draw an area the user can click in to invoke a function.
+            </summary>
+            <param name="position">The position users can click inside.</param>
+            <param name="callback">Callback to invoke when the user clicks in the given rect.</param>
+            <param name="cursor">Cursor icon to show when the cursor is over the clickable area.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawClickArea(UnityEngine.Rect,UnityEngine.Event,System.Action,UnityEditor.MouseCursor)">
+            <summary>
+            Draw an area the user can click in to invoke a function.
+            </summary>
+            <param name="position">The position users can click inside.</param>
+            <param name="currentEvent">Current <see cref="T:UnityEngine.Event"/> processing interactions.</param>
+            <param name="callback">Callback to invoke when the user clicks in the given rect.</param>
+            <param name="cursor">Cursor icon to show when the cursor is over the clickable area.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawBorderRect(UnityEngine.Rect,System.Single)">
+            <summary>
+            Draws a border with the given thickness around a given rect.
+            </summary>
+            <param name="rect">Original rect to draw the border around.</param>
+            <param name="thickness">Thickness of the border.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawBorderRect(UnityEngine.Rect,System.Single,UnityEngine.Color)">
+            <summary>
+            Draws a border with the given thickness and color around a given rect.
+            </summary>
+            <param name="rect">Original rect to draw the border around.</param>
+            <param name="thickness">Thickness of the border.</param>
+            <param name="color">Color of the border.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.CreateGenericMenu(UnityEngine.Rect,HFN.CommonEditor.GenericMenuData[])">
+            <summary>
+            Convenience function to handle creating context (right-click) menus.
+            </summary>
+            <param name="rect">The rect area to confine context clicks to.</param>
+            <param name="menuOptions">The options and their callbacks to add to the menu.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFoldout(System.Boolean,UnityEngine.GUIContent,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a toggleable foldout. Returns true if the foldout is toggled open and should show its contents.
+            </summary>
+            <param name="isExpanded">The value determining if the foldout is expanded or closed.</param>
+            <param name="label">The label for the foldout.</param>
+            <param name="buttons">Extra <see cref="T:HFN.CommonEditor.CustomEditorUtility.Button"/> widgets to show in the header.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFoldout(UnityEngine.Rect,System.Boolean,UnityEngine.GUIContent,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a toggleable foldout. Returns true if the foldout is toggled open and should show its contents.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the foldout at.</param>
+            <param name="isExpanded">The value determining if the foldout is expanded or closed.</param>
+            <param name="label">The label for the foldout.</param>
+            <param name="buttons">Extra <see cref="T:HFN.CommonEditor.CustomEditorUtility.Button"/> widgets to show in the header.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPlatformToolbar(System.Int32,System.Boolean,UnityEditor.BuildTarget[])">
+            <summary>
+            Draw a toolbar with various build platform icons for use in platform specific inspector settings.
+            </summary>
+            <param name="activeSelection">The currently active platform.</param>
+            <param name="useSmallIcons">If true, will use the small version of platform icons for toolbar buttons.</param>
+            <param name="platforms">Platforms to display on the toolbar. <see cref="F:UnityEditor.BuildTarget.NoTarget"/> can be used to show a button for the editor.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPlatformToolbar(UnityEngine.Rect,System.Int32,System.Boolean,UnityEditor.BuildTarget[])">
+            <summary>
+            Draw a toolbar with various build platform icons for use in platform specific inspector settings.
+            </summary>
+            <param name="position">Position for the toolbar.</param>
+            <param name="activeSelection">The currently active platform.</param>
+            <param name="useSmallIcons">If true, will use the small version of platform icons for toolbar buttons.</param>
+            <param name="platforms">Platforms to display on the toolbar. <see cref="F:UnityEditor.BuildTarget.NoTarget"/> can be used to show a button for the editor.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.GetPlatformToolbarContent(UnityEditor.BuildTarget[],System.Boolean,System.String)">
+            <summary>
+            Returns an array of <see cref="T:UnityEngine.GUIContent"/> values representing platforms. <see cref="F:UnityEditor.BuildTarget.NoTarget"/> can be used to obtain an option for the editor.
+            </summary>
+            <param name="platforms">Platforms to obtain content values for.</param>
+            <param name="useSmallIcons">If true, will use the small version of platform icons.</param>
+            <param name="tooltipTemplate">string.Format compliant string. The 0 index will be replaced with the platform's name.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawArrayDropArea``1(UnityEngine.Rect,UnityEditor.SerializedProperty)">
+            <summary>
+            Draws a transparent rect area that users can drag objects into to add them to arrays.
+            This mimics the default behavior of array fields.
+            </summary>
+            <typeparam name="T">The type of the object to detect when dragging.</typeparam>
+            <param name="position">The position to draw the drop area at. This is usually the same rect used by the array foldout.</param>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> for the array.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.OpenPreferences">
+            <summary>
+            Function to open the preferences window.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawHfnSquareBanner(System.Single,System.String,UnityEditor.MessageType,System.Single)">
+            <summary>
+            Draws a banner using the HFN logo.
+            </summary>
+            <param name="height">Height of the banner area.</param>
+            <param name="message">The message to display.</param>
+            <param name="type">The type of message to display.</param>
+            <param name="padding">Padding between the HFN logo and the message.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawScriptField(UnityEditor.SerializedObject)">
+            <summary>
+            Draws the default script field shown at the top of most scripts' inspectors.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawSpatialBlendField(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a slider similar to the <see cref="T:UnityEngine.AudioSource"/> Spatial Blend inspector control.
+            </summary>
+            <param name="property">The property to set values on.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawSpatialBlendField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a slider similar to the <see cref="T:UnityEngine.AudioSource"/> Spatial Blend inspector control.
+            </summary>
+            <param name="position">The total position to draw the slider in.</param>
+            <param name="property">The property to set values on.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawSpatialBlendField(System.Single,UnityEngine.GUIContent)">
+            <summary>
+            Draws a slider similar to the <see cref="T:UnityEngine.AudioSource"/> Spatial Blend inspector control.
+            </summary>
+            <param name="value">Value to adjust.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawSpatialBlendField(UnityEngine.Rect,System.Single,UnityEngine.GUIContent)">
+            <summary>
+            Draws a slider similar to the <see cref="T:UnityEngine.AudioSource"/> Spatial Blend inspector control.
+            </summary>
+            <param name="position">The total position to draw the slider in.</param>
+            <param name="value">Value to adjust.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeFloatField(UnityEditor.SerializedProperty,System.Single,System.Single,System.String,System.Single)">
+            <summary>
+            Draws a float field with a button that will randomize the float value.
+            </summary>
+            <param name="property">The <see cref="T:System.Single"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeFloatField(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Single,System.Single,System.String,System.Single)">
+            <summary>
+            Draws a float field with a button that will randomize the float value.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:System.Single"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeFloatField(UnityEngine.GUIContent,System.Single,System.Single,System.Single,System.String,System.Single)">
+            <summary>
+            Draws a float field with a button that will randomize the float value.
+            </summary>
+            <param name="label">Label for the field.</param>
+            <param name="value">The float value being displayed.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeFloatField(UnityEngine.Rect,UnityEngine.GUIContent,System.Single,System.Single,System.Single,System.String,System.Single)">
+            <summary>
+            Draws a float field with a button that will randomize the float value.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="label">Label for the field.</param>
+            <param name="value">The float value being displayed.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeFloatField(UnityEditor.SerializedProperty,System.Int32,System.Int32,System.String,System.Single)">
+            <summary>
+            Draws a int field with a button that will randomize the int value.
+            </summary>
+            <param name="property">The <see cref="T:System.Int32"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeIntField(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Int32,System.Int32,System.String,System.Single)">
+            <summary>
+            Draws a int field with a button that will randomize the int value.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:System.Int32"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeIntField(UnityEngine.GUIContent,System.Int32,System.Int32,System.Int32,System.String,System.Single)">
+            <summary>
+            Draws a int field with a button that will randomize the int value.
+            </summary>
+            <param name="label">Label for the field.</param>
+            <param name="value">The int value being displayed.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawRandomizeIntField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,System.Int32,System.Int32,System.String,System.Single)">
+            <summary>
+            Draws an int field with a button that will randomize the int value.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="label">Label for the field.</param>
+            <param name="value">The int value being displayed.</param>
+            <param name="min">The minimum value that can be generated.</param>
+            <param name="max">The maximum value that can be generated.</param>
+            <param name="buttonLabel">The text to show on the button that randomly generates a number.</param>
+            <param name="buttonWidth">The width of the randomize button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawEnumMaskField(UnityEditor.SerializedProperty,UnityEngine.GUIContent,System.Type)">
+            <summary>
+            Draw a bitmask field for an enum value.
+            </summary>
+            <param name="property">The enum property to draw.</param>
+            <param name="label">Label for the dropdown.</param>
+            <param name="enumType">The type for the target enum being drawn as a bitmask.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawEnumMaskField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent,System.Type)">
+            <summary>
+            Draw a bitmask field for an enum value.
+            </summary>
+            <param name="position">Position to draw the field at.</param>
+            <param name="property">The enum property to draw.</param>
+            <param name="label">Label for the dropdown.</param>
+            <param name="enumType">The type for the target enum being drawn as a bitmask.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawEnumMaskField(System.Int32,UnityEngine.GUIContent,System.Type)">
+            <summary>
+            Draw a bitmask field for an enum mask value.
+            </summary>
+            <param name="mask">Value for the enum mask.</param>
+            <param name="label">Label for the dropdown.</param>
+            <param name="enumType">The type for the target enum being drawn as a bitmask.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawEnumMaskField(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent,System.Type)">
+            <summary>
+            Draw a bitmask field for an enum mask value.
+            </summary>
+            <param name="position">Position to draw the field at.</param>
+            <param name="mask">Value for the enum mask.</param>
+            <param name="label">Label for the dropdown.</param>
+            <param name="enumType">The type for the target enum being drawn as a bitmask.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPropertyFieldWithButtons(UnityEditor.SerializedProperty,System.Single,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a property field with buttons to the right of the field.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> to draw a field for.</param>
+            <param name="padding">Space between the field and buttons.</param>
+            <param name="buttons">Buttons to draw to the right of the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPropertyFieldWithButtons(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Single,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a property field with buttons to the right of the field.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> to draw the field in.</param>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> to draw a field for.</param>
+            <param name="padding">Space between the field and buttons.</param>
+            <param name="buttons">Buttons to draw to the right of the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFieldWithButtons(System.Action{UnityEngine.Rect},System.Single,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a field with buttons to the right of the field.
+            </summary>
+            <param name="fieldCallback">Callback with a <see cref="T:UnityEngine.Rect"/> parameter for position that will draw the actual field.</param>
+            <param name="padding">Space between the field and buttons.</param>
+            <param name="buttons">Buttons to draw to the right of the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFieldWithButtons(UnityEngine.Rect,System.Action{UnityEngine.Rect},System.Single,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a field with buttons to the right of the field.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> to draw the field in.</param>
+            <param name="fieldCallback">Callback with a <see cref="T:UnityEngine.Rect"/> parameter for position that will draw the actual field.</param>
+            <param name="padding">Space between the field and buttons.</param>
+            <param name="buttons">Buttons to draw to the right of the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFolderPathField(UnityEditor.SerializedProperty,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a folder selection string field.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the folder select popup.</param>
+            <param name="targetFolder">The default location to open the folder select popup to.</param>
+            <param name="defaultName">The string to use in the search field of the folder select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFolderPathField(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a folder selection string field using the given position.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the folder select popup.</param>
+            <param name="targetFolder">The default location to open the folder select popup to.</param>
+            <param name="defaultName">The string to use in the search field of the folder select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFolderPathField(UnityEngine.GUIContent,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a folder selection string field.
+            </summary>
+            <param name="label">Label for the field.</param>
+            <param name="path">The <see cref="T:System.String"/> path to the folder.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the folder select popup.</param>
+            <param name="targetFolder">The default location to open the folder select popup to.</param>
+            <param name="defaultName">The string to use in the search field of the folder select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFolderPathField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a folder selection string field using the given position.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="label">Label for the field.</param>
+            <param name="path">The <see cref="T:System.String"/> path to the folder.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the folder select popup.</param>
+            <param name="targetFolder">The default location to open the folder select popup to.</param>
+            <param name="defaultName">The string to use in the search field of the folder select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFilePathField(UnityEditor.SerializedProperty,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a file selection string field.
+            </summary>
+            <param name="property">The <see cref="T:System.String"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the file select popup.</param>
+            <param name="targetFolder">The default location to open the file select popup to.</param>
+            <param name="extension">Then file type to show when using the file select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFilePathField(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a file selection string field using the given position.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:System.String"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the file select popup.</param>
+            <param name="targetFolder">The default location to open the file select popup to.</param>
+            <param name="extension">Then file type to show when using the file select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFilePathField(UnityEngine.GUIContent,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a file selection string field.
+            </summary>
+            <param name="label">Label for the field.</param>
+            <param name="path">The <see cref="T:System.String"/> path to the target file.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the file select popup.</param>
+            <param name="targetFolder">The default location to open the file select popup to.</param>
+            <param name="extension">Then file type to show when using the file select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawFilePathField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Draws a file selection string field.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="label">Label for the field.</param>
+            <param name="path">The <see cref="T:System.String"/> path to the target file.</param>
+            <param name="relativePath">Should the returned path be a relative path to the project root folder?</param>
+            <param name="popupTitle">The title for the file select popup.</param>
+            <param name="targetFolder">The default location to open the file select popup to.</param>
+            <param name="extension">Then file type to show when using the file select popup.</param>
+            <param name="browseButtonHint">The tooltip to display when hovering over the field's browse button.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawAssemblyDropdownField(UnityEditor.SerializedProperty)">
+            <summary>
+            Draws a dropdown displaying assemblies loaded by the project.
+            </summary>
+            <param name="property">The <see cref="T:System.String"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawAssemblyDropdownField(UnityEditor.SerializedProperty,System.String[])">
+            <summary>
+            Draws a dropdown displaying assemblies loaded by the project.
+            </summary>
+            <param name="property">The <see cref="T:System.String"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="ignoredAssemblies">Array of assemblies to hide from the shown dropdown. ie "System" will prevent "System.Text" from displaying. Use a dot to include parent assemblies ("System." will exclude all but "System")</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawAssemblyDropdownField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent,System.String[])">
+            <summary>
+            Draws a dropdown displaying assemblies loaded by the project.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:System.String"/> <see cref="T:UnityEditor.SerializedProperty"/> to draw.</param>
+            <param name="label">Label for the field.</param>
+            <param name="ignoredAssemblies">Array of assemblies to hide from the shown dropdown. ie "System" will prevent "System.Text" from displaying. Use a dot to include parent assemblies ("System." will exclude all but "System")</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawAssemblyDropdownField(System.String,UnityEngine.GUIContent)">
+            <summary>
+            Draws a dropdown displaying assemblies loaded by the project.
+            </summary>
+            <param name="property">The <see cref="T:System.String"/> to draw as a dropdown.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawAssemblyDropdownField(System.String,UnityEngine.GUIContent,System.String[])">
+            <summary>
+            Draws a dropdown displaying assemblies loaded by the project.
+            </summary>
+            <param name="property">The <see cref="T:System.String"/> to draw as a dropdown.</param>
+            <param name="label">Label for the field.</param>
+            <param name="ignoredAssemblies">Array of assemblies to hide from the shown dropdown. ie "System" will prevent "System.Text" from displaying. Use a dot to include parent assemblies ("System." will exclude all but "System")</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawAssemblyDropdownField(UnityEngine.Rect,System.String,UnityEngine.GUIContent,System.String[])">
+            <summary>
+            Draws a dropdown displaying assemblies loaded by the project.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:System.String"/> to draw as a dropdown.</param>
+            <param name="label">Label for the field.</param>
+            <param name="ignoredAssemblies">Array of assemblies to hide from the shown dropdown. ie "System" will prevent "System.Text" from displaying. Use a dot to include parent assemblies ("System." will exclude all but "System")</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPasswordField(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a string <see cref="T:UnityEditor.SerializedProperty"/> as a password field.
+            </summary>
+            <param name="property">A string <see cref="T:UnityEditor.SerializedProperty"/>.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPasswordField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a string <see cref="T:UnityEditor.SerializedProperty"/> as a password field.
+            </summary>
+            <param name="position">Position to draw the field at.</param>
+            <param name="property">A string <see cref="T:UnityEditor.SerializedProperty"/>.</param>
+            <param name="label">Label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPasswordField(UnityEngine.GUIContent,System.String,System.Boolean@)">
+            <summary>
+            Draws a string as a password field.
+            </summary>
+            <param name="label">Label for the field.</param>
+            <param name="value">String value to draw.</param>
+            <param name="isVisible">ref bool determining if the string is visible or hidden.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawPasswordField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,System.Boolean@)">
+            <summary>
+            Draws a string as a password field.
+            </summary>
+            <param name="position">Position to draw the field at.</param>
+            <param name="label">Label for the field.</param>
+            <param name="value">String value to draw.</param>
+            <param name="isVisible">ref bool determining if the string is visible or hidden.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawIListSize(System.Collections.IList,UnityEngine.GUIContent)">
+            <summary>
+            Draws the size field of an array or list.
+            </summary>
+            <param name="list">The array or list to draw a size field for.</param>
+            <param name="label">Label for the size field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawLanguageCodeDropdown(UnityEditor.SerializedProperty)">
+            <summary>
+            Draws a <see cref="T:HFN.Common.LanguageCode"/> inspector field with extra formatting to make language selection easier.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> of a <see cref="T:HFN.Common.LanguageCode"/> value.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawLanguageCodeDropdown(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a <see cref="T:HFN.Common.LanguageCode"/> inspector field with extra formatting to make language selection easier.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> of a <see cref="T:HFN.Common.LanguageCode"/> value.</param>
+            <param name="label">The label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawLanguageCodeDropdown(UnityEngine.GUIContent,HFN.Common.LanguageCode)">
+            <summary>
+            Draws a <see cref="T:HFN.Common.LanguageCode"/> inspector field with extra formatting to make language selection easier.
+            </summary>
+            <param name="label">The label for the field.</param>
+            <param name="currentValue">The current <see cref="T:HFN.Common.LanguageCode"/> value.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawLanguageCodeDropdown(UnityEngine.Rect,UnityEngine.GUIContent,HFN.Common.LanguageCode)">
+            <summary>
+            Draws a <see cref="T:HFN.Common.LanguageCode"/> inspector field with extra formatting to make language selection easier.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="label">The label for the field.</param>
+            <param name="currentValue">The current <see cref="T:HFN.Common.LanguageCode"/> value.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.InitializeLocalizationLabels">
+            <summary>
+            Initializes values used in Localization related inspector fields.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderNameDropdown(UnityEditor.SerializedProperty)">
+            <summary>
+            Draws a dropdown listing all built-in and custom shader names.
+            </summary>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> of a shader name's string value.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderNameDropdown(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
+            <summary>
+            Draws a dropdown listing all built-in and custom shader names.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="property">The <see cref="T:UnityEditor.SerializedProperty"/> of a shader name's string value.</param>
+            <param name="label">The label for the field.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderNameDropdown(UnityEngine.GUIContent,System.String)">
+            <summary>
+            Draws a dropdown listing all built-in and custom shader names.
+            </summary>
+            <param name="label">The label for the field.</param>
+            <param name="value">The current string value for the shader name.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderNameDropdown(UnityEngine.Rect,UnityEngine.GUIContent,System.String)">
+            <summary>
+            Draws a dropdown listing all built-in and custom shader names.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> position to draw the field in.</param>
+            <param name="label">The label for the field.</param>
+            <param name="value">The current string value for the shader name.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a material's shader keywords.
+            </summary>
+            <param name="keywordProperty">The string serialized property used for the shader keyword.</param>
+            <param name="materialProperty">Serialized property referencing a material.</param>
+            <param name="filter">Filtering to apply to shown keywords. (ie only show Color/float/Vector keywords)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,UnityEngine.GUIContent,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a material's shader keywords.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> to draw the dropdown at.</param>
+            <param name="keywordProperty">The string serialized property used for the shader keyword.</param>
+            <param name="materialProperty">Serialized property referencing a <see cref="T:UnityEngine.Material"/>.</param>
+            <param name="label"><see cref="T:UnityEngine.GUIContent"/> to use as the dropdown's label.</param>
+            <param name="filter">Filtering to apply to shown keywords. (ie only show Color/float/Vector keywords)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a target renderer's target material's shader keywords.
+            </summary>
+            <param name="keywordProperty">The string serialized property used for the shader keyword.</param>
+            <param name="rendererProperty">Serialized property referencing a <see cref="T:UnityEngine.Renderer"/>.</param>
+            <param name="materialIndexProperty">Optional serialized property referencing the index of the target material on the target renderer.</param>
+            <param name="filter">Filtering to apply to shown keywords. (ie only show Color/float/Vector keywords)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty,UnityEngine.GUIContent,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a target renderer's target material's shader keywords.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> to draw the dropdown at.</param>
+            <param name="keywordProperty">The string serialized property used for the shader keyword.</param>
+            <param name="rendererProperty">Serialized property referencing a <see cref="T:UnityEngine.Renderer"/>.</param>
+            <param name="materialIndexProperty">Optional serialized property referencing the index of the target material on the target renderer.</param>
+            <param name="label"><see cref="T:UnityEngine.GUIContent"/> to use as the dropdown's label.</param>
+            <param name="filter">Filtering to apply to shown keywords. (ie only show Color/float/Vector keywords)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(System.String,UnityEngine.Material,UnityEngine.GUIContent,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a material's shader keywords.
+            </summary>
+            <param name="keyword">The string used for the shader keyword.</param>
+            <param name="material"><see cref="T:UnityEngine.Material"/> to grab shader keywords from.</param>
+            /// <param name="label"><see cref="T:UnityEngine.GUIContent"/> to use as the dropdown's label.</param>
+            <param name="filter">Filtering to apply to shown keywords. (ie only show Color/float/Vector keywords)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(UnityEngine.Rect,System.String,UnityEngine.Material,UnityEngine.GUIContent,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a material's shader keywords.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> to draw the dropdown at.</param>
+            <param name="keyword">The string used for the shader keyword.</param>
+            <param name="material"><see cref="T:UnityEngine.Material"/> to grab shader keywords from.</param>
+            <param name="label"><see cref="T:UnityEngine.GUIContent"/> to use as the dropdown's label.</param>
+            <param name="filter">Filtering to apply to shown keywords. (ie only show Color/float/Vector keywords)</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(System.String,UnityEngine.Renderer,System.Int32,UnityEngine.GUIContent,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a target renderer's target material's shader keywords.
+            </summary>
+            <param name="keywordProperty">The string serialized property used for the shader keyword.</param>
+            <param name="rendererProperty">Serialized property referencing a <see cref="T:UnityEngine.Renderer"/>.</param>
+            <param name="materialIndexProperty">Optional serialized property referencing the index of the target material on the target renderer.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawShaderKeywordDropdown(UnityEngine.Rect,System.String,UnityEngine.Renderer,System.Int32,UnityEngine.GUIContent,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Draws a dropdown populated by a target renderer's target material's shader keywords.
+            </summary>
+            <param name="position">The <see cref="T:UnityEngine.Rect"/> to draw the dropdown at.</param>
+            <param name="keywordProperty">The string serialized property used for the shader keyword.</param>
+            <param name="rendererProperty">Serialized property referencing a <see cref="T:UnityEngine.Renderer"/>.</param>
+            <param name="materialIndexProperty">Optional serialized property referencing the index of the target material on the target renderer.</param>
+            <param name="label"><see cref="T:UnityEngine.GUIContent"/> to use as the dropdown's label.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.InitializeShaderNames">
+            <summary>
+            Initializes values used in Shader name related fields.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.GenerateMaterialLabels(UnityEngine.Material,HFN.Common.ShaderPropertyType)">
+            <summary>
+            Generates the labels used in the DrawShaderKeywordDropdown functions.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawHeader(System.Int32,System.String,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a toggleable foldout header. Returns true if the header is toggled open and should show its contents.
+            </summary>
+            <param name="id">The int ID for the header. Should be unique within a given editor.</param>
+            <param name="text">The label to show on the header.</param>
+            <param name="buttons">Extra <see cref="T:HFN.CommonEditor.CustomEditorUtility.Button"/> widgets to show in the header.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.DrawHeader(System.Int32,System.String,UnityEngine.Color,HFN.CommonEditor.CustomEditorUtility.Button[])">
+            <summary>
+            Draws a toggleable foldout header. Returns true if the header is toggled open and should show its contents.
+            </summary>
+            <param name="id">The int ID for the header. Should be unique within a given editor.</param>
+            <param name="text">The label to show on the header.</param>
+            <param name="color">The color of the header.</param>
+            <param name="buttons">Extra <see cref="T:HFN.CommonEditor.CustomEditorUtility.Button"/> widgets to show in the header.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomEditorUtility.ReselectTarget(UnityEngine.Object,System.Action)">
+            <summary>
+            Deselects The currently selected object, waits one frame, then reselects it.
+            Useful for forcing editors to repaint.
+            </summary>
+            <param name="target">The <see cref="T:UnityEngine.Object"/> to reselect.</param>
+            <param name="callback">Callback to invoke after reselecting the target object.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.DependenciesUtility">
+            <summary>
+            Utility class that allows selection of various specific asset dependencies.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DependenciesUtility.defaultTextures">
+            <summary>
+            List of Unity's built in textures.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.DependenciesUtility.defaultSprites">
+            <summary>
+            List of Unity's built in sprites.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.DependenciesUtility.SelectDependencies``1">
+            <summary>
+            Selects all objects in the project that are of type T.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> of the desired selection.</typeparam>
+        </member>
+        <member name="M:HFN.CommonEditor.DependenciesUtility.SelectDependencies``2">
+            <summary>
+            Selects all objects in the project that are of type T and not of type U.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> of the desired selection.</typeparam>
+            <typeparam name="U">The <see cref="T:System.Type"/> to ignore when selecting objects.</typeparam>
+        </member>
+        <member name="M:HFN.CommonEditor.DependenciesUtility.SelectPrefabDependencies(UnityEditor.PrefabAssetType)">
+            <summary>
+            Selects all prefab objects of the given type.
+            </summary>
+            <param name="type">The type of prefab object to search for.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.DependenciesUtility.SelectImageDependencies``1(System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+            <summary>
+            Selects image depedencies of the given type.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> of the desired selection.</typeparam>
+            <param name="parameters">Parameters to affect which objects are selected.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.AdaptiveEditor">
+            <summary>
+            Base editor for custom editors that are used for child classes that will automatically draw any fields those child classes add.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.AdaptiveEditor.UpdateIgnoreFields">
+            <summary>
+            Function to override to determine what fields will be ignored when drawing extra fields.
+            By default, this ignores the "m_Script" field.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.AdaptiveEditor.DrawExtraFields">
+            <summary>
+            Draw any fields not specified by the <see cref="F:HFN.CommonEditor.AdaptiveEditor.ignoreFields"/> list.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.GameObjectEditorUtility">
+            <summary>
+            Utility class to handle editor specific functionality for <see cref="T:UnityEngine.GameObject"/> assets.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GameObjectEditorUtility.Place(UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+            Parents the target <see cref="T:UnityEngine.GameObject"/> to the specified parent and ensures proper updating of the scene and related assets.
+            </summary>
+            <param name="go">The <see cref="T:UnityEngine.GameObject"/> to parent.</param>
+            <param name="parent">The parent for the given <see cref="T:UnityEngine.GameObject"/>.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.GenericMenuData">
+            <summary>
+            Convenience class for passing content for <see cref="T:UnityEditor.GenericMenu"/>s.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GenericMenuData.label">
+            <summary>
+            Label for the context menu option.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GenericMenuData.on">
+            <summary>
+            If true, the associated menu option will have a check mark next to it.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GenericMenuData.disabled">
+            <summary>
+            If true, the associated menu option will be disabled.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GenericMenuData.isDivide">
+            <summary>
+            If true, a divide is placed into the menu.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.GenericMenuData.callback">
+            <summary>
+            Callback to invoke when this option is selected.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuData.#ctor(System.String,UnityEditor.GenericMenu.MenuFunction)">
+            <summary>
+            Convenience class to create basic context menu options.
+            </summary>
+            <param name="label">Label for the context menu option.</param>
+            <param name="callback">Callback to invoke when this option is selected.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuData.#ctor(System.String,System.Boolean,System.Boolean,UnityEditor.GenericMenu.MenuFunction)">
+            <summary>
+            Convenience class to create basic context menu options.
+            </summary>
+            <param name="label">Label for the context menu option.</param>
+            <param name="on">If true, the associated menu option will have a check mark next to it.</param>
+            <param name="disabled">If true, the associated menu option will be disabled.</param>
+            <param name="callback">Callback to invoke when this option is selected.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuData.#ctor(UnityEngine.GUIContent,UnityEditor.GenericMenu.MenuFunction)">
+            <summary>
+            Convenience class to create basic context menu options.
+            </summary>
+            <param name="label">Label for the context menu option.</param>
+            <param name="callback">Callback to invoke when this option is selected.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuData.#ctor(UnityEngine.GUIContent,System.Boolean,System.Boolean,UnityEditor.GenericMenu.MenuFunction)">
+            <summary>
+            Convenience class to create basic context menu options.
+            </summary>
+            <param name="label">Label for the context menu option.</param>
+            <param name="on">If true, the associated menu option will have a check mark next to it.</param>
+            <param name="disabled">If true, the associated menu option will be disabled.</param>
+            <param name="callback">Callback to invoke when this option is selected.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuData.#ctor(System.String)">
+            <summary>
+            Convenience class to create basic context menu options. This constructor will add a dividing line to the context menu.
+            </summary>
+            <param name="path">Path to the submenu. If empty will just add a separator to the root menu.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.GenericMenuExtensions">
+            <summary>
+            Extension methods for the <see cref="T:UnityEditor.GenericMenu"/> editor class.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuExtensions.AddItem(UnityEditor.GenericMenu,HFN.CommonEditor.GenericMenuData)">
+            <summary>
+            Adds an item to the menu with values set by the given data.
+            </summary>
+            <param name="menu">The menu to add an item to.</param>
+            <param name="data">Data for the added item.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GenericMenuExtensions.AddDisabledItem(UnityEditor.GenericMenu,HFN.CommonEditor.GenericMenuData)">
+            <summary>
+            Adds a disabled item to the menu with values set by the given data.
+            </summary>
+            <param name="menu">The menu to add a disabled item to.</param>
+            <param name="data">Data for the added item.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.CustomContextMenuItems">
+            <summary>
+            Class containing custom component context commands.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.SelectTerrainAsset">
+            <summary>
+            Selects the asset containing the selected terrain's data.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.NonDestructiveResetPosition">
+            <summary>
+            Deparents a transform's children, moves the transform to its local origin (0, 0, 0) then reparents its children.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.NonDestructiveResetRotation">
+            <summary>
+            Deparents a transform's children, resets the transform to its local identity rotation (0, 0, 0) then reparents its children.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.NonDestructiveResetScale">
+            <summary>
+            Deparents a transform's children, resets the transform to its default local scale (1, 1, 1) then reparents its children.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.NonDestructiveResetAll">
+            <summary>
+            Deparents a transform's children, resets the transform to its local origin, rotation and scale, then reparents its children.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.LogRectTransformRect">
+            <summary>
+            Logs the true size of the RectTransform's rect.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.AddRendererSpriteAtlasMapper">
+            <summary>
+            Adds a <see cref="T:HFN.Common.RendererSpriteAtlasMapper"/> component to all selected <see cref="T:UnityEngine.SpriteRenderer"/> objects (if one doesn't already exist).
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.CustomContextMenuItems.AddRendererSpriteAtlasMapperValidation">
+            <summary>
+            Validation method for Add Renderer Sprite Atlas Mapper context command.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CustomMenuItems">
+            <summary>
+            Class containing menu items for performing various tasks.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.MenuItemUtility">
+            <summary>
+            Utility class for <see cref="T:UnityEditor.MenuItem"/> features.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.KeyReferenceType">
+            <summary>
+            Determines how a signing key or certificate is referenced.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.KeyReferenceType.AbsolutePath">
+            <summary>
+            Absolute string path to the target file.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.KeyReferenceType.ProjectReference">
+            <summary>
+            Reference to a file contained in the project.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.PlayerSettingsData">
+            <summary>
+            Editor only ScriptableObject that stores player settings. Convenient when multiple sub-projects exist in one project.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.PlayerSettingsData.AndroidKeystorePath">
+            <summary>
+            The path to the Android keystore file.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.PlayerSettingsData.LoadSettings(System.Boolean)">
+            <summary>
+            This this player data into the editor's player data.
+            If an HFN version file exists, it will be updated accordingly.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.PlayerSettingsDataEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.CommonEditor.PlayerSettingsData"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.HfnPreferences">
+            <summary>
+            Class handling drawing the HFN preferences window.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.HfnPreferences.OnDrawExtraPreferences">
+            <summary>
+            Delegate to assign extra preference window sections' GUI functions to in order to show them in the HFN preferences window.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.HfnPreferences.OnResetExtraPreferences">
+            <summary>
+            Delegate to assign extra preference window sections' reset functions to in order to reset their value to default.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.HFNPropertyDrawer">
+            <summary>
+            Base class for HFN implementations of <see cref="T:UnityEditor.PropertyDrawer"/>.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.HFNPropertyDrawer.SetLabel(UnityEngine.GUIContent@)">
+            <summary>
+            Detects if the given field is using a <see cref="T:UnityEngine.TooltipAttribute"/> and populates its label to use the attribute's tooltip.
+            (Workaround for Unity not populating a label with its tooltip value by default)
+            </summary>
+            <param name="label">The label passed into the OnGUI function.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.AssetReferencePropertyDrawer">
+            <summary>
+            Base class for property drawers for classes dependent on referencing an asset.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.BaseReferencePropertyDrawer">
+            <summary>
+            Base property drawer for classes that reference assets to draw fields.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.BaseReferencePropertyDrawer.ASSET_WIDTH">
+            <summary>
+            The width of the asset reference field when an asset is referenced.
+            </summary>
+        </member>
+        <member name="F:HFN.CommonEditor.BaseReferencePropertyDrawer.ASSET_BUFFER">
+            <summary>
+            The space between the asset reference field and the target field when as asset is referenced.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.BaseReferencePropertyDrawer.AssetProperty">
+            <summary>
+            The name of the asset reference property.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.BaseReferencePropertyDrawer.TargetProperty">
+            <summary>
+            The property to draw after an asset reference has been assigned.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.BaseReferencePropertyDrawer.DrawTargetField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty)">
+            <summary>
+            Method to override to draw the target field once an asset is referenced.
+            </summary>
+            <param name="position">The </param>
+            <param name="property"></param>
+            <param name="assetProperty"></param>
+        </member>
+        <member name="M:HFN.CommonEditor.BaseReferencePropertyDrawer.CreateContextMenu(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to add methods to the context menu that appears when right clicking on the property's label.
+            </summary>
+            <param name="position">The position in which right clicking will show a context menu.</param>
+            <param name="targetProperty"><see cref="T:UnityEditor.SerializedProperty"/> for the target property.</param>
+            <param name="assetProperty"><see cref="T:UnityEditor.SerializedProperty"/> for the asset reference property.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.BaseReferencePropertyDrawer.ShowAssetCallback(UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to add functionality when the asset reference's field is expanded or collapsed.
+            </summary>
+            <param name="property"><see cref="T:UnityEditor.SerializedProperty"/> for the root property.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.BaseReferencePropertyDrawer.IsAssetValid(UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to vlidate the assigned asset reference.
+            </summary>
+            <param name="assetProperty">The <see cref="T:UnityEditor.SerializedProperty"/> for the asset reference.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.BaseReferencePropertyDrawer.DrawAssetValidationWarning(UnityEngine.Rect,UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to show a warning (usually with EditorGUI.HelpBox()) when the target asset is invalid.
+            </summary>
+            <param name="position">The position rect for the warning area.</param>
+            <param name="assetProperty"><see cref="T:UnityEditor.SerializedProperty"/> for the asset reference.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.BaseReferencePropertyDrawer.OnAssetPropertyChanged(UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to add functionality when the referenced asset is changed. By default, this does nothing.
+            </summary>
+            <param name="assetProperty">The <see cref="T:UnityEditor.SerializedProperty"/> for the asset reference property.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.GUIDReferencePropertyDrawer">
+            <summary>
+            Variation of <see cref="T:HFN.CommonEditor.AssetReferencePropertyDrawer"/> that uses a GUID for the asset so the asset doesn't need to be loaded into memory at runtime.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDReferencePropertyDrawer.InitializeGUID(UnityEngine.Object,UnityEditor.SerializedProperty)">
+            <summary>
+            Sets the serialized property for the asset's GUID.
+            </summary>
+            <param name="asset">The asset to grab the GUID for.</param>
+            <param name="guidProperty">The <see cref="T:UnityEditor.SerializedProperty"/> to set the string property of.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDReferencePropertyDrawer.CreateContextMenu(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to add methods to the context menu that appears when right clicking on the property's label.
+            </summary>
+            <param name="position">The position in which right clicking will show a context menu.</param>
+            <param name="targetProperty"><see cref="T:UnityEditor.SerializedProperty"/> for the target property.</param>
+            <param name="guidProperty"><see cref="T:UnityEditor.SerializedProperty"/> for the asset reference's GUID.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDReferencePropertyDrawer.DrawAssetValidationWarning(UnityEngine.Rect,UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to show a warning (usually with EditorGUI.HelpBox()) when the target asset is invalid.
+            </summary>
+            <param name="position">The position rect for the warning area.</param>
+            <param name="guidProperty"><see cref="T:UnityEditor.SerializedProperty"/> for the asset reference's GUID.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.GUIDReferencePropertyDrawer.OnAssetPropertyChanged(UnityEditor.SerializedProperty)">
+            <summary>
+            [Optional] Method to override to add functionality when the referenced asset is changed. By default, this does nothing.
+            </summary>
+            <param name="guidProperty">The <see cref="T:UnityEditor.SerializedProperty"/> for the asset reference property.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.ScriptIconWindow">
+            <summary>
+            Editor window used to generate text to place into Common DLL meta data so scripts with custom icons retain their icons.
+            https://forum.unity3d.com/threads/custom-asset-icons.118656/
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.Binary2TextUtility">
+            <summary>
+            Utility class to handle interactions with Unity's binary2text.exe for reading binary serialized files.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CommentAssetEditor">
+            <summary>
+            Custome editor for <see cref="T:HFN.CommonEditor.CommentAsset"/>.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.CommentEditor">
+            <summary>
+            Custom editor for <see cref="T:HFN.CommonEditor.Comment"/>.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.DropListDrawer.ListName">
+            <summary>
+            String to override to change which list is drawn in the inspector.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.DropListDrawer.EndDrag(System.Collections.Generic.List{UnityEngine.Object},UnityEditor.SerializedProperty)">
+            <summary>
+            Function to override to change what happens when dragged objects are dropped in the drop area.
+            </summary>
+            <param name="draggedObjects">The objects being dragged.</param>
+            <param name="listProperty">The property for the object list.</param>
+        </member>
+        <member name="M:HFN.CommonEditor.DropListDrawer.GetAttribute``1(HFN.Common.DropListAttribute[])">
+            <summary>
+            Returns an attribute derived from <see cref="T:HFN.Common.DropListAttribute"/>.
+            </summary>
+            <typeparam name="T"><see cref="T:HFN.Common.DropListAttribute"/> derived type to search attributes for.</typeparam>
+            <param name="attributes">Array of <see cref="T:HFN.Common.DropListAttribute"/>s set on the field.</param>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorMeshCollection">
+            <summary>
+            ScriptableObject containing references to primitive meshes used by HFN mesh tools.
+            Referencing meshes this way is an improvement over generating these meshes on the fly all the time.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorMeshCollection.InvertedCubeMesh">
+            <summary>
+            <see cref="T:UnityEngine.Mesh"/> for a basic Unity cube primitive with its normals reversed.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorMeshCollection.InvertedSphereMesh">
+            <summary>
+            <see cref="T:UnityEngine.Mesh"/> for a basic Unity sphere primitive with its normals reversed.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorMeshCollection.InvertedCapsuleMesh">
+            <summary>
+            <see cref="T:UnityEngine.Mesh"/> for a basic Unity capsule primitive with its normals reversed.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorMeshCollection.InvertedCylinderMesh">
+            <summary>
+            <see cref="T:UnityEngine.Mesh"/> for a basic Unity cylinder primitive with its normals reversed.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.EditorTextureCollection">
+            <summary>
+            ScriptableObject containing references to company logos and other editor GUI textures.
+            Primarily used in editor tooling.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.DefaultTexture">
+            <summary>
+            Texture used when another texture fails to load.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.HfnLogo">
+            <summary>
+            Texture for a standard HFN logo with transparent background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.HfnLogoSquare">
+            <summary>
+            Texture for a square HFN logo with transparent background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.HfnLogoWide">
+            <summary>
+            Texture for a wide HFN logo with transparent background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.HfnEditorLogo">
+            <summary>
+            Texture for a standard HFN logo with appropriate pro or non-pro skin colored background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.HfnEditorLogoSquare">
+            <summary>
+            Texture for a square HFN logo with appropriate pro or non-pro skin colored background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.HfnEditorLogoWide">
+            <summary>
+            Texture for a wide HFN logo with appropriate pro or non-pro skin colored background.
+            </summary>
+        </member>
+        <member name="P:HFN.CommonEditor.EditorTextureCollection.UVGrid">
+            <summary>
+            Texture used to show UV grid coordinates.
+            </summary>
+        </member>
+        <member name="T:HFN.CommonEditor.ScriptableObjectUtility">
+            <summary>
+            Convenience class allowing creation of <see cref="T:UnityEngine.ScriptableObject"/> assets.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.ScriptableObjectUtility.CreateAsset``1(System.String,UnityEngine.Object)">
+            <summary>
+            This makes it easy to create, name and place unique new ScriptableObject asset files.
+            </summary>
+        </member>
+        <member name="M:HFN.CommonEditor.ScriptableObjectUtility.CreateAssetAtPath``1(System.String,System.Boolean)">
+            <summary>
+            Creates a scriptable object of type T at the given path.
+            The given path must be relative to the assets folder. (ie "Assets/HFN/...")
+            </summary>
+            <typeparam name="T">Type of the class to instantiate.</typeparam>
+            <param name="path">Path relative to the assets folder to create the asset at.</param>
+            <param name="selectAfter">If true, will select the created asset and show it in the inspector.</param>
+        </member>
+    </members>
+</doc>

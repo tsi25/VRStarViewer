@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SleepyOwlSoft.Common</name>
+    </assembly>
+    <members>
+        <member name="T:SleepyOwl.Common.JsonArray">
+            <summary>
+            Class containing an array of JSON values.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.#ctor">
+            <summary>
+            Data object representing an array of JSON values.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.#ctor(System.Collections.Generic.IEnumerable{SleepyOwl.Common.JsonValue})">
+            <summary>
+            Data object representing an array of JSON values.
+            </summary>
+            <param name="values"><see cref="T:System.Collections.IEnumerable"/> of <see cref="T:SleepyOwl.Common.JsonValue"/> values to populate the array with.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.#ctor(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Data object representing an array of JSON number values.
+            </summary>
+            <param name="values"><see cref="T:System.Collections.IEnumerable"/> of <see cref="T:System.Int32"/> values to populate the array with.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.#ctor(System.Collections.Generic.IEnumerable{System.Single})">
+            <summary>
+            Data object representing an array of JSON number values.
+            </summary>
+            <param name="values"><see cref="T:System.Collections.IEnumerable"/> of <see cref="T:System.Single"/> values to populate the array with.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.#ctor(System.Collections.Generic.IEnumerable{System.Boolean})">
+            <summary>
+            Data object representing an array of JSON bool values.
+            </summary>
+            <param name="values"><see cref="T:System.Collections.IEnumerable"/> of <see cref="T:System.Boolean"/> values to populate the array with.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Data object representing an array of JSON string values.
+            </summary>
+            <param name="values"><see cref="T:System.Collections.IEnumerable"/> of <see cref="T:System.String"/> values to populate the array with.</param>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonArray.Count">
+            <summary>
+            The number of JSON elements contained in the array.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Add(SleepyOwl.Common.JsonValue)">
+            <summary>
+            Adds the given <see cref="T:SleepyOwl.Common.JsonValue"/> to the array.
+            </summary>
+            <param name="item">The <see cref="T:SleepyOwl.Common.JsonValue"/> being added to the array.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.AddRange(System.Collections.Generic.IEnumerable{SleepyOwl.Common.JsonValue})">
+            <summary>
+            Add values from the given <see cref="T:System.Collections.IEnumerable"/> to the array.
+            </summary>
+            <param name="enumerable">Range of values to add to the array.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Clear">
+            <summary>
+            Clears the array of its JSON elements.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(System.Predicate{SleepyOwl.Common.JsonValue})">
+            <summary>
+            Returns true if the array contains any JSON values matching the given predicate.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns true if the array contains any JSON object values matching the given predicate.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(SleepyOwl.Common.JsonValue)">
+            <summary>
+            Returns true if the array contains the target <see cref="T:SleepyOwl.Common.JsonValue"/>.
+            </summary>
+            <param name="item"><see cref="T:SleepyOwl.Common.JsonValue"/> to check the array for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(System.String)">
+            <summary>
+            Returns true if the array contains the given string value.
+            </summary>
+            <param name="value"><see cref="T:System.String"/> value to check the array for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(System.Boolean)">
+            <summary>
+            Returns true if the array contains the given bool value.
+            </summary>
+            <param name="value"><see cref="T:System.Boolean"/> value to check the array for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(System.Int32)">
+            <summary>
+            Returns true if the array contains the given int value.
+            </summary>
+            <param name="value"><see cref="T:System.Int32"/> value to check the array for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Contains(System.Single)">
+            <summary>
+            Returns true if the array contains the given float value.
+            </summary>
+            <param name="value"><see cref="T:System.Single"/> value to check the array for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.Find(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns the first <see cref="T:SleepyOwl.Common.JsonObject"/> value matching the given predicate, or null if none match.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.FindLast(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns the last <see cref="T:SleepyOwl.Common.JsonObject"/> value matching the given predicate, or null if none match.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.FindAll(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns a list of all <see cref="T:SleepyOwl.Common.JsonObject"/> values matching the given predicate.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.IndexOf(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns the index of the first <see cref="T:SleepyOwl.Common.JsonObject"/> value matching the given predicate, or -1 if it is not contained by the array.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.IndexOf(SleepyOwl.Common.JsonValue)">
+            <summary>
+            Returns the index of the given <see cref="T:SleepyOwl.Common.JsonValue"/> in the array.
+            </summary>
+            <param name="item"><see cref="T:SleepyOwl.Common.JsonValue"/> to search for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.IndexesOf(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns the indexes of <see cref="T:SleepyOwl.Common.JsonObject"/> values matching the given predicate.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.LastIndexOf(System.Predicate{SleepyOwl.Common.JsonObject})">
+            <summary>
+            Returns the index of the last <see cref="T:SleepyOwl.Common.JsonObject"/> value matching the given predicate, or -1 if it is not contained by the array.
+            </summary>
+            <param name="predicate">Method used to evaluate values.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonArray.ToFormattedString(System.Boolean,System.UInt32)">
+            <summary>
+            Converts the array into a valid JSON string.
+            </summary>
+            <param name="pretty">If true, will format the output string to be more human readable.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonObject">
+            <summary>
+            Class containing various JSON values, indexed by string ID.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.#ctor">
+            <summary>
+            Data object containing various JSON values, indexed by string ID.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.#ctor(System.Collections.Generic.IDictionary{System.String,SleepyOwl.Common.JsonValue})">
+            <summary>
+            Data object containing various JSON values, indexed by string ID.
+            </summary>
+            <param name="keyValuePairs"><see cref="T:System.Collections.IDictionary"/> of <see cref="T:System.String"/> keys and <see cref="T:SleepyOwl.Common.JsonValue"/> values to populate the object with.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.#ctor(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{SleepyOwl.Common.JsonValue})">
+            <summary>
+            Data object containing various JSON values, indexed by string ID.
+            </summary>
+            <param name="keys"><see cref="T:System.Collections.IList"/> of <see cref="T:System.String"/> keys for the object.</param>
+            <param name="values"><see cref="T:System.Collections.IList"/> of <see cref="T:SleepyOwl.Common.JsonValue"/> values for the object.</param>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonObject.Keys">
+            <summary>
+            The <see cref="T:System.String"/> keys contained by the object.
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonObject.Values">
+            <summary>
+            The <see cref="T:SleepyOwl.Common.JsonValue"/> values contained by the object.
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonObject.Count">
+            <summary>
+            Number of elements contained in the object.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.Add(System.String,SleepyOwl.Common.JsonValue)">
+            <summary>
+            Adds the given <see cref="T:SleepyOwl.Common.JsonValue"/> to the object.
+            </summary>
+            <param name="key">The <see cref="T:System.String"/> key for the value.</param>
+            <param name="value">The <see cref="T:SleepyOwl.Common.JsonValue"/> to add to the object.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.Add(System.Collections.Generic.KeyValuePair{System.String,SleepyOwl.Common.JsonValue})">
+            <summary>
+            Adds the given <see cref="T:System.Collections.Generic.KeyValuePair`2"/> with a <see cref="T:System.String"/> key and <see cref="T:SleepyOwl.Common.JsonValue"/> value to the object.
+            </summary>
+            <param name="item">The key and corresponding value to add to the object.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.Clear">
+            <summary>
+            Clears the object of its keys and values.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.Contains(System.Collections.Generic.KeyValuePair{System.String,SleepyOwl.Common.JsonValue})">
+            <summary>
+            Returns true if the object contains the given key and corresponding value.
+            </summary>
+            <param name="item">The key and corresponding value to check for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.ContainsKey(System.String)">
+            <summary>
+            Returns true if the object contains the given <see cref="T:System.String"/> key.
+            </summary>
+            <param name="key">The <see cref="T:System.String"/> key to check for.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.Remove(System.String)">
+            <summary>
+            Removes the target key and corresponding value from the object.
+            </summary>
+            <param name="key">The key for the value to be removed.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.Remove(System.Collections.Generic.KeyValuePair{System.String,SleepyOwl.Common.JsonValue})">
+            <summary>
+            Removes the target key and corresponding value from the object.
+            </summary>
+            <param name="item">The key and corresponding value to be removed.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.TryGetValue(System.String,SleepyOwl.Common.JsonValue@)">
+            <summary>
+            Attempts to retrieve the target value from the object.
+            </summary>
+            <param name="key">The key for the desired value.</param>
+            <param name="value">The value to populate if the given key exists.</param>
+            <returns>True if the value was found, false if the given key doesn't exist.</returns>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonObject.ToFormattedString(System.Boolean,System.UInt32)">
+            <summary>
+            Converts the object into a valid JSON string.
+            </summary>
+            <param name="pretty">If true, will format the output string to be more human readable.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonValue">
+            <summary>
+            Base class for all JSON values to derive from.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonValue.ToFormattedString(System.Boolean)">
+            <summary>
+            Returns a string representing this JSON value, properly formatted for JSON standards.
+            </summary>
+            <param name="pretty">If true, will format the output string to be more human readable.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonValue.ToString">
+            <summary>
+            Converts the JSON value into a valid JSON string.
+            </summary>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonValueCollection">
+            <summary>
+            Base class for collections of JSON values like <see cref="T:SleepyOwl.Common.JsonArray"/> and <see cref="T:SleepyOwl.Common.JsonObject"/>.
+            </summary>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonBool">
+            <summary>
+            JSON representation of a bool value.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonBool.#ctor(System.Boolean)">
+            <summary>
+            Data object representing a <see cref="T:System.Boolean"/> value in JSON form.
+            </summary>
+            <param name="value">The <see cref="T:System.Boolean"/> value for the JSON bool.</param>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonBool.Value">
+            <summary>
+            The <see cref="T:System.Boolean"/> value for this JSON bool.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonBool.ToFormattedString(System.Boolean,System.UInt32)">
+            <summary>
+            Returns the bool value, properly formatted for JSON standards.
+            </summary>
+            <param name="pretty">Doesn't affect anything.</param>
+            <param name="depth">Doesn't affect anything.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonNull">
+            <summary>
+            JSON representation of a null value.
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonNull.Value">
+            <summary>
+            This always returns null;
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNull.ToFormattedString(System.Boolean,System.UInt32)">
+            <summary>
+            Returns a string representing a valid JSON null value.
+            </summary>
+            <param name="pretty">Doesn't affect anything.</param>
+            <param name="depth">Doesn't affect anything.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonNumber">
+            <summary>
+            JSON representation of a number value.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.Int32)">
+            <summary>
+            Data object representing an <see cref="T:System.Int32"/> value in JSON form.
+            </summary>
+            <param name="value">The <see cref="T:System.Int32"/> value of the JSON number.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.Int64)">
+            <summary>
+            Data object representing a <see cref="T:System.Int64"/> value in JSON form.
+            </summary>
+            <param name="value">The <see cref="T:System.Int64"/> value of the JSON number.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.Single)">
+            <summary>
+            Data object representing a <see cref="T:System.Single"/> value in JSON form.
+            </summary>
+            <param name="value">The <see cref="T:System.Single"/> value of the JSON number.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.Double)">
+            <summary>
+            Data object representing a <see cref="T:System.Double"/> value in JSON form.
+            </summary>
+            <param name="value">The <see cref="T:System.Double"/> value of the JSON number.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.String,System.Int32)">
+            <summary>
+            Data object representing an <see cref="T:System.Int32"/> value in JSON form.
+            </summary>
+            <param name="stringValue"><see cref="T:System.String"/> representation of the target <see cref="T:System.Int32"/> value.</param>
+            <param name="defaultValue">The default <see cref="T:System.Int32"/> value of the JSON number if the string fails to parse.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.String,System.Int64)">
+            <summary>
+            Data object representing a <see cref="T:System.Int64"/> value in JSON form.
+            </summary>
+            <param name="stringValue"><see cref="T:System.String"/> representation of the target <see cref="T:System.Int64"/> value.</param>
+            <param name="defaultValue">The default <see cref="T:System.Int64"/> value of the JSON number if the string fails to parse.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.String,System.Single)">
+            <summary>
+            Data object representing a <see cref="T:System.Single"/> value in JSON form.
+            </summary>
+            <param name="stringValue"><see cref="T:System.String"/> representation of the target <see cref="T:System.Single"/> value.</param>
+            <param name="defaultValue">The default <see cref="T:System.Single"/> value of the JSON number if the string fails to parse.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.#ctor(System.String,System.Double)">
+            <summary>
+            Data object representing a <see cref="T:System.Double"/> value in JSON form.
+            </summary>
+            <param name="stringValue"><see cref="T:System.String"/> representation of the target <see cref="T:System.Double"/> value.</param>
+            <param name="defaultValue">The default <see cref="T:System.Double"/> value of the JSON number if the string fails to parse.</param>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonNumber.IntValue">
+            <summary>
+            The value of the JSON number, cast as an <see cref="T:System.Int32"/>.
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonNumber.LongValue">
+            <summary>
+            The value of the JSON number, cast as a <see cref="T:System.Int64"/>.
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonNumber.FloatValue">
+            <summary>
+            The value of the JSON number, cast as a <see cref="T:System.Single"/>.
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonNumber.DoubleValue">
+            <summary>
+            The value of the JSON number, cast as a <see cref="T:System.Double"/>.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonNumber.ToFormattedString(System.Boolean,System.UInt32)">
+            <summary>
+            Returns the number value in string form.
+            </summary>
+            <param name="pretty">Doesn't affect anything.</param>
+            <param name="depth">Doesn't affect anything.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonString">
+            <summary>
+            JSON representation of a string value.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonString.#ctor(System.String)">
+            <summary>
+            Data object representing a <see cref="T:System.String"/> value in JSON form.
+            </summary>
+            <param name="value">The <see cref="T:System.String"/> value for the JSON string.</param>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonString.Value">
+            <summary>
+            The raw, unformatted string value.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonString.ToFormattedString(System.Boolean,System.UInt32)">
+            <summary>
+            Returns the string value, properly formatted for JSON standards.
+            </summary>
+            <param name="pretty">Doesn't affect anything.</param>
+            <param name="depth">Doesn't affect anything.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonParser">
+            <summary>
+            Handles parsing a string into valid JSON values.
+            </summary>
+        </member>
+        <member name="F:SleepyOwl.Common.JsonParser.DebugParsing">
+            <summary>
+            If true, the parser will output logs as it parses content.
+            </summary>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.Parse(System.String,System.Int32)">
+            <summary>
+            Parse a JSON string into a navigable <see cref="T:SleepyOwl.Common.JsonObject"/>.
+            Can optionally specify a limit on nested levels to parse.
+            </summary>
+            <param name="jsonString">The string to parse.</param>
+            <param name="levels">[Optional] The number of levels to parse. If 0, will parse the entire object.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseAsync(System.String,System.Action{SleepyOwl.Common.JsonObject},System.Int32)">
+            <summary>
+            Parse a JSON string into a navigable <see cref="T:SleepyOwl.Common.JsonObject"/>.
+            Can optionally specify a limit on nested levels to parse.
+            </summary>
+            <param name="jsonString">The string to parse.</param>
+            <param name="callback">Callback to invoke to return the parsed JSON when it is finished.</param>
+            <param name="levels">[Optional] The number of levels to parse. If 0, will parse the entire object.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseAsync(System.String,System.Int32)">
+            <summary>
+            Parse a JSON string into a navigable <see cref="T:SleepyOwl.Common.JsonObject"/>.
+            Can optionally specify a limit on nested levels to parse.
+            </summary>
+            <param name="jsonString">The string to parse.</param>
+            <param name="levels">[Optional] The number of levels to parse. If 0, will parse the entire object.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.Parse(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <param name="asynchronous">If true, will execute async-await functionality, otherwise will run synchronously.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseArray(System.String,System.Int32)">
+            <summary>
+            Parses the given string into a <see cref="T:SleepyOwl.Common.JsonArray"/>.
+            Can optionally specify a limit on nested levels to parse.
+            </summary>
+            <param name="jsonString">The string to parse.</param>
+            <param name="levels">[Optional] The number of levels to parse. If 0, will parse the entire array.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseArrayAsync(System.String,System.Action{SleepyOwl.Common.JsonArray},System.Int32)">
+            <summary>
+            Parses the given string into a <see cref="T:SleepyOwl.Common.JsonArray"/>.
+            Can optionally specify a limit on nested levels to parse.
+            </summary>
+            <param name="jsonString">The string to parse.</param>
+            <param name="callback">Callback to invoke to return the parsed JSON when it is finished.</param>
+            <param name="levels">[Optional] The number of levels to parse. If 0, will parse the entire array.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseArrayAsync(System.String,System.Int32)">
+            <summary>
+            Parses the given string into a <see cref="T:SleepyOwl.Common.JsonArray"/>.
+            Can optionally specify a limit on nested levels to parse.
+            </summary>
+            <param name="jsonString">The string to parse.</param>
+            <param name="levels">[Optional] The number of levels to parse. If 0, will parse the entire array.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseArray(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <param name="asynchronous">If true, will execute async-await functionality, otherwise will run synchronously.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseSurfaceAsync(System.String,System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})">
+            <summary>
+            Parses just the first level elements of a JSON string into a dictionary of strings.
+            Useful for grabbing surface level info without parsing the entire object hierarchy.
+            </summary>
+            <param name="jsonString">The JSON string to parse.</param>
+            <param name="callback">Callback to invoke to return the parsed JSON (as a Dictionary of strings) when it is finished.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseSurfaceAsync(System.String)">
+            <summary>
+            Parses just the first level elements of a JSON string into a dictionary of strings.
+            Useful for grabbing surface level info without parsing the entire object hierarchy.
+            </summary>
+            <param name="jsonString">The JSON string to parse.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ParseSurface(System.String)">
+            <summary>
+            Parses just the first level elements of a JSON string into a dictionary of strings.
+            Useful for grabbing surface level info without parsing the entire object hierarchy.
+            </summary>
+            <param name="jsonString">The JSON string to parse.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.GetEndIndexForString(System.String,System.Int32)">
+            <summary>
+            Returns the end index of a JSON string value within a JSON object or array.
+            </summary>
+            <param name="jsonString">The total string being parsed.</param>
+            <param name="startIndex">The start index for the string. This should be the index of the starting double quote.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.ContainsReservedChar(System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns true if the given segment of the JSON string contains a reserved character.
+            </summary>
+            <param name="jsonString">The total JSON string being parsed.</param>
+            <param name="startIndex">The start index for the string being examined.</param>
+            <param name="endIndex">The end index for the string being examined.</param>
+        </member>
+        <member name="M:SleepyOwl.Common.JsonParser.GenerateUnescapedString(System.String,System.Int32,System.Int32)">
+            <summary>
+            Generates an unescaped string from the given section of the JSON string being parsed.
+            </summary>
+            <param name="jsonString">The total JSON string being parsed.</param>
+            <param name="startIndex">The start index for the string being examined.</param>
+            <param name="endIndex">The end index for the string being examined.</param>
+        </member>
+        <member name="T:SleepyOwl.Common.JsonUtility">
+            <summary>
+            Utilies for various JSON classes.
+            </summary>
+        </member>
+        <member name="F:SleepyOwl.Common.JsonUtility.IndentSpace">
+            <summary>
+            The amount of spacing to use per individual space.
+            </summary>
+        </member>
+        <member name="F:SleepyOwl.Common.JsonUtility.CachedIndents">
+            <summary>
+            Cached string values for indents to speed up ToFormattedString operations
+            </summary>
+        </member>
+        <member name="P:SleepyOwl.Common.JsonUtility.IndentLevel">
+            <summary>
+            Current indent level, for spacing purposes.
+            </summary>
+        </member>
+    </members>
+</doc>

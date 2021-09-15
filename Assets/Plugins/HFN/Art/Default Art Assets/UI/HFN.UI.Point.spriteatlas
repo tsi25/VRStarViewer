@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HFN.UI.Point
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: ba108673c3a72a24c951c9f422b41bbd, type: 3}
+    - {fileID: 2800000, guid: 70fc52c9d2b619f46bc65cda8aeb1065, type: 3}
+    - {fileID: 2800000, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+    - {fileID: 2800000, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+    totalSpriteSurfaceArea: 11328
+    bindAsDefault: 0
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ba108673c3a72a24c951c9f422b41bbd, type: 3}
+  - {fileID: 21300000, guid: 70fc52c9d2b619f46bc65cda8aeb1065, type: 3}
+  - {fileID: 21300012, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300008, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300002, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300004, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300000, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300006, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300014, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300010, guid: 3b84fdeac17e8f342b00919e242cace4, type: 3}
+  - {fileID: 21300004, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300012, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300014, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300008, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300006, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300000, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300002, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  - {fileID: 21300010, guid: 4a854b6f0f002c34e95dcc3fda85eedb, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SlicedSquare
+  - Checkerboard
+  - FileExplorer_Refresh
+  - FileExplorer_Folder
+  - FileExplorer_Audio
+  - FileExplorer_Text
+  - FileExplorer_File
+  - FileExplorer_Image
+  - FileExplorer_Close
+  - FileExplorer_Up
+  - Controls_Stop
+  - Controls_Power
+  - Controls_Border
+  - Controls_FastForward
+  - Controls_Record
+  - Controls_Play
+  - Controls_Pause
+  - Controls_Skip
+  m_Tag: HFN.UI.Point
+  m_IsVariant: 0
