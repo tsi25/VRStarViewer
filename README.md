@@ -19,3 +19,7 @@ WARNING: This can be an intense VR experience and is *not* for those who get que
 ## Code Sample
 
 There is an amount of 3rd party code and assets in this prototype, the code I wrote can be found in the "Assets/HFN/Scripts/Runtime" directory. StarBuilder.cs is really the meat of the simulation but the rest of the scripts there provide valuable context and utilities.
+
+## Hardware
+
+This was prototped with the Oculus CV1 in mind since that's what I had available to me at the time. I'm not sure how well this prototype will function on other VR headsets
